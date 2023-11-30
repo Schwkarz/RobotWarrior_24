@@ -1,0 +1,10 @@
+.\objects\stm32f4xx_fmc.o: ..\FWLIB\src\stm32f4xx_fmc.c
+.\objects\stm32f4xx_fmc.o: ..\FWLIB\inc\stm32f4xx_fmc.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\stm32f4xx.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\core_cm4.h
+.\objects\stm32f4xx_fmc.o: D:\keil5V5\keil5Setup\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\core_cmInstr.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\core_cmFunc.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\core_cmSimd.h
+.\objects\stm32f4xx_fmc.o: ..\CMSIS\system_stm32f4xx.h
+.\objects\stm32f4xx_fmc.o: ..\FWLIB\inc\stm32f4xx_rcc.h
