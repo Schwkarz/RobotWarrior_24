@@ -438,6 +438,7 @@ static void GIMBAL_Feedback_Update(Gimbal_Control_t *gimbal_feedback_update)
 #if PITCH_TURN
     gimbal_feedback_update->gimbal_pitch_motor.relative_angle = -gimbal_feedback_update->gimbal_pitch_motor.relative_angle;
 #endif
+    //加了个负号，好像不能加
     gimbal_feedback_update->gimbal_yaw_motor.absolute_angle = *(gimbal_feedback_update->gimbal_INT_angle_point + INS_YAW_ADDRESS_OFFSET);
 
     // gimbal_feedback_update->gimbal_yaw_motor.relative_angle = motor_ecd_to_angle_change(gimbal_feedback_update->gimbal_yaw_motor.gimbal_motor_measure->ecd,
@@ -823,11 +824,11 @@ const Gimbal_Control_t *get_gimbal_control_point(void)
 
 void gimbal_offset_init(void)
 {
-    gimbal_control.gimbal_yaw_motor.offset_ecd =7252;//3257
+    gimbal_control.gimbal_yaw_motor.offset_ecd =972;//3257
     gimbal_control.gimbal_yaw_motor.max_relative_angle = PI/3;
     gimbal_control.gimbal_yaw_motor.min_relative_angle = -PI/3;
 
-    gimbal_control.gimbal_pitch_motor.offset_ecd = 1393;
+    gimbal_control.gimbal_pitch_motor.offset_ecd = 5451;
     gimbal_control.gimbal_pitch_motor.max_relative_angle = 0.65;
     gimbal_control.gimbal_pitch_motor.min_relative_angle = -0.45;
 }

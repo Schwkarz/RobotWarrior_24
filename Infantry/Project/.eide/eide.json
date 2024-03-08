@@ -79,6 +79,12 @@
             "path": "../User/APP/shoot/shoot.c"
           },
           {
+            "path": "../User/APP/UI_task/RM_Cilent_UI.c"
+          },
+          {
+            "path": "../User/APP/UI_task/ui_task.c"
+          },
+          {
             "path": "../User/APP/user_task/user_task.c"
           },
           {
@@ -595,7 +601,8 @@
           "../User/APP/detect_task",
           ".eide/deps",
           "../User/hardware/timer",
-          "../User/hardware/bsp_dwt"
+          "../User/hardware/bsp_dwt",
+          "../User/APP/UI_task"
         ],
         "libList": [],
         "sourceDirList": [],

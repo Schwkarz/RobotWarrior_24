@@ -34,6 +34,7 @@
 #include "calibrate_task.h"
 #include "referee_usart_task.h"
 #include "ROS_Receive.h"
+#include "ui_task.h"
 
 
 #define START_TASK_PRIO 1
@@ -75,6 +76,10 @@ static TaskHandle_t RefreeTask_Handler;
 #define IMUSEND_TASK_PRIO 19
 #define IMUSEND_STK_SIZE 512
 static TaskHandle_t imuSendTask_Handler;
+
+#define UI_TASK_PRIO 10
+#define UI_STK_SIZE 256
+static TaskHandle_t UITask_Handler;
 
 
 void start_task(void *pvParameters)
@@ -143,6 +148,14 @@ void start_task(void *pvParameters)
               (void *)NULL,
               (UBaseType_t)IMUSEND_TASK_PRIO,
               (TaskHandle_t *)&imuSendTask_Handler);
+
+
+  // xTaskCreate((TaskFunction_t)UI_Task,
+  //             (const char *)"UITask",
+  //             (uint16_t)UI_STK_SIZE,
+  //             (void *)NULL,
+  //             (UBaseType_t)UI_TASK_PRIO,
+  //             (TaskHandle_t *)&UITask_Handler);
 
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
