@@ -151,7 +151,7 @@ uint32_t end_y:11;              //图形数据
 
 typedef struct
 {
-   Graph_Data Graph_Control;
+   Graph_Data Graph_Control;  
    uint8_t show_Data[30];
 } String_Data;                  //打印字符串数据
 

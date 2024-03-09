@@ -19,11 +19,12 @@ void UI_SendByte(unsigned char ch)
    while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);	
 }
 
-/********************************************删除操作*************************************
-**参数：Del_Operate  对应头文件删除操作
-        Del_Layer    要删除的层 取值0-9
-*****************************************************************************************/
-
+/**
+ * @brief 删除操作
+ * 
+ * @param Del_Operate 对应头文件删除操作
+ * @param Del_Layer 要删除的层 取值0-9
+ */
 void UI_Delete(u8 Del_Operate,u8 Del_Layer)
 {
 
@@ -83,17 +84,21 @@ void UI_Delete(u8 Del_Operate,u8 Del_Layer)
    
    UI_Seq++;                                                         //包序号+1
 }
-/************************************************绘制直线*************************************************
-**参数：*image Graph_Data类型变量指针，用于存放图形数据
-        imagename[3]   图片名称，用于标识更改
-        Graph_Operate   图片操作，见头文件
-        Graph_Layer    图层0-9
-        Graph_Color    图形颜色
-        Graph_Width    图形线宽
-        Start_x、Start_x    开始坐标
-        End_x、End_y   结束坐标
-**********************************************************************************************************/
-        
+ 
+/**
+ * @brief 绘制直线
+ * 
+ * @param image Graph_Data类型变量指针，用于存放图形数据
+ * @param imagename 图片名称，用于标识更改
+ * @param Graph_Operate 图片操作，见头文件
+ * @param Graph_Layer 图层0-9
+ * @param Graph_Color 图形颜色
+ * @param Graph_Width 图形线宽
+ * @param Start_x 开始坐标
+ * @param Start_y 开始坐标 
+ * @param End_x 结束坐标
+ * @param End_y 结束坐标
+ */
 void Line_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph_Layer,u32 Graph_Color,u32 Graph_Width,u32 Start_x,u32 Start_y,u32 End_x,u32 End_y)
 {
    int i;
@@ -109,17 +114,20 @@ void Line_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph_L
    image->end_y = End_y;
 }
 
-/************************************************绘制矩形*************************************************
-**参数：*image Graph_Data类型变量指针，用于存放图形数据
-        imagename[3]   图片名称，用于标识更改
-        Graph_Operate   图片操作，见头文件
-        Graph_Layer    图层0-9
-        Graph_Color    图形颜色
-        Graph_Width    图形线宽
-        Start_x、Start_x    开始坐标
-        End_x、End_y   结束坐标（对顶角坐标）
-**********************************************************************************************************/
-        
+/**
+ * @brief 绘制矩形
+ * 
+ * @param image Graph_Data类型变量指针，用于存放图形数据
+ * @param imagename 图片名称，用于标识更改
+ * @param Graph_Operate 图片操作，见头文件
+ * @param Graph_Layer 图层0-9
+ * @param Graph_Color 图形颜色
+ * @param Graph_Width 图形线宽
+ * @param Start_x 开始坐标
+ * @param Start_y 开始坐标
+ * @param End_x 结束坐标（对顶角坐标）
+ * @param End_y 结束坐标（对顶角坐标）
+ */
 void Rectangle_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph_Layer,u32 Graph_Color,u32 Graph_Width,u32 Start_x,u32 Start_y,u32 End_x,u32 End_y)
 {
    int i;
@@ -135,17 +143,6 @@ void Rectangle_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Gr
    image->end_x = End_x;
    image->end_y = End_y;
 }
-
-/************************************************绘制整圆*************************************************
-**参数：*image Graph_Data类型变量指针，用于存放图形数据
-        imagename[3]   图片名称，用于标识更改
-        Graph_Operate   图片操作，见头文件
-        Graph_Layer    图层0-9
-        Graph_Color    图形颜色
-        Graph_Width    图形线宽
-        Start_x、Start_x    圆心坐标
-        Graph_Radius  图形半径
-**********************************************************************************************************/
 
 /**
  * @brief 画圆
@@ -176,18 +173,22 @@ void Circle_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph
    image->radius = Graph_Radius;
 }
 
-/************************************************绘制圆弧*************************************************
-**参数：*image Graph_Data类型变量指针，用于存放图形数据
-        imagename[3]   图片名称，用于标识更改
-        Graph_Operate   图片操作，见头文件
-        Graph_Layer    图层0-9
-        Graph_Color    图形颜色
-        Graph_Width    图形线宽
-        Graph_StartAngle,Graph_EndAngle    开始，终止角度
-        Start_y,Start_y    圆心坐标
-        x_Length,y_Length   x,y方向上轴长，参考椭圆
-**********************************************************************************************************/
-        
+/**
+ * @brief 绘制圆弧
+ * 
+ * @param image Graph_Data类型变量指针，用于存放图形数据
+ * @param imagename 图片名称，用于标识更改
+ * @param Graph_Operate 图片操作，见头文件
+ * @param Graph_Layer 图层0-9
+ * @param Graph_Color 图形颜色
+ * @param Graph_StartAngle 开始角度
+ * @param Graph_EndAngle 终止角度
+ * @param Graph_Width 图形线宽
+ * @param Start_x 圆心坐标
+ * @param Start_y 圆心坐标
+ * @param x_Length x,y方向上轴长，参考椭圆
+ * @param y_Length x,y方向上轴长，参考椭圆
+ */
 void Arc_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph_Layer,u32 Graph_Color,u32 Graph_StartAngle,u32 Graph_EndAngle,u32 Graph_Width,u32 Start_x,u32 Start_y,u32 x_Length,u32 y_Length)
 {
    int i;

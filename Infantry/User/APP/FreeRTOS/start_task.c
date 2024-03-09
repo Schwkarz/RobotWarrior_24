@@ -150,12 +150,12 @@ void start_task(void *pvParameters)
               (TaskHandle_t *)&imuSendTask_Handler);
 
 
-  // xTaskCreate((TaskFunction_t)UI_Task,
-  //             (const char *)"UITask",
-  //             (uint16_t)UI_STK_SIZE,
-  //             (void *)NULL,
-  //             (UBaseType_t)UI_TASK_PRIO,
-  //             (TaskHandle_t *)&UITask_Handler);
+  xTaskCreate((TaskFunction_t)UI_Task,
+              (const char *)"UITask",
+              (uint16_t)UI_STK_SIZE,
+              (void *)NULL,
+              (UBaseType_t)UI_TASK_PRIO,
+              (TaskHandle_t *)&UITask_Handler);
 
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
