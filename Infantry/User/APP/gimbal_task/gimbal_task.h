@@ -147,8 +147,9 @@
 
 #define YAW_ECD_TO_RAD Motor_Ecd_to_Rad/3
 
-#define GIMBAL_ACCEL_YAW_NUM 0.1f  //0.02
-#define GIMBAL_ACCEL_PITCH_NUM 0.12f
+//自瞄滤波值
+#define GIMBAL_ACCEL_YAW_NUM 0.12f  //0.02
+#define GIMBAL_ACCEL_PITCH_NUM 0.2f
 
 typedef enum
 {
