@@ -17,7 +17,7 @@ void UI_Task(void *parameter)
         //画圆和线
         Circle_Draw(Graph1,"circle_center",UI_Graph_ADD,0,UI_Color_Main,3,960,540,100);
         Line_Draw(&Graph2,"line_center",UI_Graph_ADD,0,UI_Color_Main,1,960,540,960,200);
-
+        
         UI_ReFresh(2,*Graph1,Graph2);
         vTaskDelay(100);
     }

@@ -22,7 +22,7 @@ typedef enum
     GAME_ROBOT_HP_CMD_ID              = 0x0003,
     FIELD_EVENTS_CMD_ID               = 0x0101,
     SUPPLY_PROJECTILE_ACTION_CMD_ID   = 0x0102,
-    SUPPLY_PROJECTILE_BOOKING_CMD_ID  = 0x0103,
+    // SUPPLY_PROJECTILE_BOOKING_CMD_ID  = 0x0103,
     REFEREE_WARNING_CMD_ID            = 0x0104,
     ROBOT_STATE_CMD_ID                = 0x0201,
     POWER_HEAT_DATA_CMD_ID            = 0x0202,
@@ -32,9 +32,17 @@ typedef enum
     ROBOT_HURT_CMD_ID                 = 0x0206,
     SHOOT_DATA_CMD_ID                 = 0x0207,
     BULLET_REMAINING_CMD_ID           = 0x0208,
+    GROUND_ROBOT_POSITION_CMD_ID      = 0x020B,
+    RADAR_MARK_DATA_CMD_ID            = 0x020C,
+    SENTRY_INFO_DATA_CMD_ID           = 0x020D,
+    RADAR_INFO_CMD_ID                 = 0x020E,
     STUDENT_INTERACTIVE_DATA_CMD_ID   = 0x0301,
+    CUSTOM_CLIENT_DATA_CMD_ID         = 0x0306,
+    MAP_DATA_CMD_ID                   = 0x0307,
+    CUSTOM_INFO_CMD_ID                = 0x0308,
     IDCustomData,
 }referee_cmd_id_t;
+
 typedef  struct
 {
   uint8_t SOF;
