@@ -1,8 +1,8 @@
 #ifndef __RM_CILENT_UI__
 #define __RM_CILENT_UI__
 
-#define Robot_ID UI_Data_RobotID_BHero
-#define Cilent_ID UI_Data_CilentID_BHero        //机器人角色设置
+#define Robot_ID UI_Data_RobotID_BStandard1
+#define Cilent_ID UI_Data_CilentID_BStandard1        //机器人角色设置
 
 #include "stm32f4xx.h"
 #include "stdarg.h"
@@ -156,7 +156,7 @@ typedef struct
 } String_Data;                  //打印字符串数据
 
 
-
+void UI_SendByte(unsigned char ch);
 void UI_Delete(u8 Del_Operate,u8 Del_Layer);
 void Line_Draw(Graph_Data *image,char imagename[3],u32 Graph_Operate,u32 Graph_Layer,u32 Graph_Color,u32 Graph_Width,u32 Start_x,u32 Start_y,u32 End_x,u32 End_y);
 int UI_ReFresh(int cnt,...);

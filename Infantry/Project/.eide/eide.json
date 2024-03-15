@@ -61,6 +61,12 @@
             "path": "../User/APP/INS_task/INS_task.c"
           },
           {
+            "path": "../User/APP/nuaa_ui/ui_default_Ungroup_0.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_interface.c"
+          },
+          {
             "path": "../User/APP/referee_task/referee_usart_task.c"
           },
           {
@@ -602,7 +608,8 @@
           ".eide/deps",
           "../User/hardware/timer",
           "../User/hardware/bsp_dwt",
-          "../User/APP/UI_task"
+          "../User/APP/UI_task",
+          "../User/APP/nuaa_ui"
         ],
         "libList": [],
         "sourceDirList": [],

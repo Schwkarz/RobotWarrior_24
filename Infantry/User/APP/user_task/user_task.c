@@ -99,7 +99,7 @@ void UserTask(void *pvParameters)
         // angle_degree[2] = (*(angle + INS_ROLL_ADDRESS_OFFSET));
 
         //从裁判系统获取底盘功率
-        // get_chassis_power_and_buffer(&local_power, &local_buffer);
+        get_chassis_power_and_buffer(&local_power, &local_buffer);
         // printf("%.2f, %.2f\n", local_power, local_buffer);
 
         // printf("%.2f, %d, %d\n", local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f, 
@@ -142,6 +142,9 @@ void UserTask(void *pvParameters)
 
         //计算底盘功率
         // Bluetooth_Send("%hd",5);
+
+        //底盘速度
+        // printf("vx= %,2f \r\n",local_chassis_move->vx);
 
         //获取陀螺仪数据
         // printf("%.2f, %.2f, %.2f\n",local_INS_accel[0],local_INS_accel[1],local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f);

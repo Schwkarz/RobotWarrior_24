@@ -30,6 +30,9 @@
                 "d:\\RM\\GITHUB\\Infantry\\User\\APP\\referee_task",
                 "d:\\RM\\GITHUB\\Infantry\\User\\Components\\support",
                 "d:\\RM\\GITHUB\\Infantry\\User\\APP\\detect_task",
+                "d:\\RM\\GITHUB\\Infantry\\User\\hardware\\bsp_dwt",
+                "d:\\RM\\GITHUB\\Infantry\\User\\hardware\\timer",
+                "d:\\RM\\GITHUB\\Infantry\\User\\APP\\UI_task",
                 "d:\\RM\\GITHUB\\Infantry\\FWLIB\\src",
                 "d:\\RM\\GITHUB\\Infantry\\FreeRTOS",
                 "d:\\RM\\GITHUB\\Infantry\\FreeRTOS\\portable\\MemMang"
