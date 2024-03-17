@@ -3,4 +3,5 @@
 - [x] 自瞄联调
 - [x] 自定义UI
 - [x] 云台校准
-- [x] yaw轴pitch轴pid优化
+- [x] yaw轴pid优化
+- [ ] pitch轴pid优化
