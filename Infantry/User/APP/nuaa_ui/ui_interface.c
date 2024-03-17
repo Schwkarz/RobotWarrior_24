@@ -6,7 +6,6 @@
 #include <string.h>
 #include "main.h"
 #include "stm32f4xx.h"
-
 uint8_t seq = 0;
 
 void print_message(const uint8_t *message, const int length) {
@@ -15,7 +14,6 @@ void print_message(const uint8_t *message, const int length) {
     }
     printf("\n\n");
 }
-
 void UART6_Send_Data(uint8_t* data, int len) {
     for (int i = 0; i < len; i++) {
         while(USART_GetFlagStatus(USART6, USART_FLAG_TXE) == RESET); // 等待上一次数据发送完成

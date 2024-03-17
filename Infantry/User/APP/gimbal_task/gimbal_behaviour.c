@@ -160,6 +160,12 @@ static void gimbal_motionless_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *
   */
 static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *gimbal_control_set);
 
+/**
+ * @brief 获取云台行为状态机
+ * 
+ * @return gimbal_behaviour_e 
+ */
+gimbal_behaviour_e get_gimbal_behaviour(void);
 
 //云台行为状态机
 static gimbal_behaviour_e gimbal_behaviour = GIMBAL_ZERO_FORCE;
@@ -876,3 +882,7 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
     }
 } 
 
+gimbal_behaviour_e get_gimbal_behaviour(void)
+{
+    return gimbal_behaviour;
+}

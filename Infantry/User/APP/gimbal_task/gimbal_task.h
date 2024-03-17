@@ -184,8 +184,8 @@ typedef struct
     Gimbal_PID_t gimbal_motor_absolute_angle_pid;    //绝对角度位置pid
     Gimbal_PID_t gimbal_motor_relative_angle_pid;    //相对角度位置pid
     PidTypeDef gimbal_motor_gyro_pid;                //yaw电机 速度电流pid
-    gimbal_motor_mode_e gimbal_motor_mode;           //云台控制状态机
     gimbal_motor_mode_e last_gimbal_motor_mode;
+    gimbal_motor_mode_e gimbal_motor_mode;           //云台控制状态机
     uint16_t offset_ecd;     //yaw电机转子中间位置
     fp32 max_relative_angle; //rad
     fp32 min_relative_angle; //rad

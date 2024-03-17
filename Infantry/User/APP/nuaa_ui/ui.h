@@ -10,16 +10,28 @@ extern "C" {
 
 #include "ui_interface.h"
 
-#include "ui_default_Ungroup_0.h"
+#include "ui_default_group1_0.h"
+#include "ui_default_group1_1.h"
+#include "ui_default_group1_2.h"
+#include "ui_default_group1_3.h"
 
-#define ui_init_default_Ungroup() \
-_ui_init_default_Ungroup_0()
+#define ui_init_default_group1() \
+_ui_init_default_group1_0(); \
+_ui_init_default_group1_1(); \
+_ui_init_default_group1_2(); \
+_ui_init_default_group1_3()
 
-#define ui_update_default_Ungroup() \
-_ui_update_default_Ungroup_0()
+#define ui_update_default_group1() \
+_ui_update_default_group1_0(); \
+_ui_update_default_group1_1(); \
+_ui_update_default_group1_2(); \
+_ui_update_default_group1_3()
 
-#define ui_remove_default_Ungroup() \
-_ui_remove_default_Ungroup_0()
+#define ui_remove_default_group1() \
+_ui_remove_default_group1_0(); \
+_ui_remove_default_group1_1(); \
+_ui_remove_default_group1_2(); \
+_ui_remove_default_group1_3()
     
 
 

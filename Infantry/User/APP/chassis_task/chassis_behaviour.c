@@ -118,6 +118,12 @@ static void chassis_rotation_control(fp32 *vx_set, fp32 *vy_set, fp32 *wz_set, c
 
 static void chassis_rotation_exit_control(fp32 *vx_set, fp32 *vy_set, fp32 *wz_set, chassis_move_t *chassis_move_rc_to_vector);
 
+/**
+ * @brief 获取底盘行为状态机
+ * 
+ * @return chassis_behaviour_e 
+ */
+chassis_behaviour_e get_chasis_behaviour(void);
 
 
 //底盘行为状态机
@@ -542,3 +548,7 @@ bool_t rotation_cmd_gimbal_absolute(void)
     }
 }
 
+chassis_behaviour_e get_chasis_behaviour(void)
+{
+    return chassis_behaviour_mode;
+}

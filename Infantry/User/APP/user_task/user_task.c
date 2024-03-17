@@ -19,6 +19,7 @@
 #include "User_Task.h"
 #include "main.h"
 #include "stdio.h"
+#include "string.h"
 
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
@@ -89,6 +90,7 @@ void UserTask(void *pvParameters)
             led_blue_toggle();
             Tcount = 0;
         }
+        // taskENTER_CRITICAL();
         //姿态角 将rad 变成 度，除这里的姿态角的单位为度，其他地方的姿态角，单位均为弧度
         angle_degree[0] = (*(angle + INS_YAW_ADDRESS_OFFSET)) * 57.3f;
         angle_degree[1] = (*(angle + INS_PITCH_ADDRESS_OFFSET)) * 57.3f;
@@ -99,8 +101,8 @@ void UserTask(void *pvParameters)
         // angle_degree[2] = (*(angle + INS_ROLL_ADDRESS_OFFSET));
 
         //从裁判系统获取底盘功率
-        get_chassis_power_and_buffer(&local_power, &local_buffer);
-        // printf("%.2f, %.2f\n", local_power, local_buffer);
+        // get_chassis_power_and_buffer(&local_power, &local_buffer);
+        // printf("%.2f, %.2f\r\n", local_power, local_buffer);
 
         // printf("%.2f, %d, %d\n", local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f, 
         //     local_gimbal_control->ecd_count, local_gimbal_control->gimbal_yaw_motor.gimbal_motor_measure->ecd);
@@ -148,6 +150,7 @@ void UserTask(void *pvParameters)
 
         //获取陀螺仪数据
         // printf("%.2f, %.2f, %.2f\n",local_INS_accel[0],local_INS_accel[1],local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f);
+        // taskEXIT_CRITICAL();
         vTaskDelay(10);
 #if INCLUDE_uxTaskGetStackHighWaterMark
         UserTaskStack = uxTaskGetStackHighWaterMark(NULL);

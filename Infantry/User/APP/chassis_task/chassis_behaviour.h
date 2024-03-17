@@ -41,4 +41,6 @@ extern void chassis_behaviour_control_set(fp32 *vx_set, fp32 *vy_set, fp32 *angl
 
 //小陀螺控制云台模式为absolute
 extern bool_t rotation_cmd_gimbal_absolute(void);
+
+chassis_behaviour_e get_chasis_behaviour();
 #endif
