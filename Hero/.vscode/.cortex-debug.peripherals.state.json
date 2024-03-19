@@ -1,0 +1,1 @@
+[{"node":"GPIOC","expanded":true,"format":0,"pinned":true},{"node":"GPIOG","expanded":false,"format":0,"pinned":true},{"node":"GPIOG.IDR","expanded":true,"format":0},{"node":"EXTI.PR","expanded":true,"format":0},{"node":"NVIC","expanded":true,"format":0,"pinned":false},{"node":"SPI1.SR","expanded":true,"format":0},{"node":"SPI1.DR","expanded":true,"format":0}]

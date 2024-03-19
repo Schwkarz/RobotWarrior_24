@@ -1,0 +1,598 @@
+{
+  "name": "warrior",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "algorithm",
+        "files": [
+          {
+            "path": "../User/Components/algorithm/AHRS.lib"
+          },
+          {
+            "path": "../User/Components/algorithm/AHRS_middleware.c"
+          },
+          {
+            "path": "../User/Components/algorithm/arm_cortexM4lf_math.lib"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "APP",
+        "files": [
+          {
+            "path": "../User/APP/calibrate_task/calibrate_task.c"
+          },
+          {
+            "path": "../User/APP/CAN_receive/CAN_receive.c"
+          },
+          {
+            "path": "../User/APP/chassis_remote_control/chassis_behaviour.c"
+          },
+          {
+            "path": "../User/APP/chassis_remote_control/chassis_power_control.c"
+          },
+          {
+            "path": "../User/APP/chassis_remote_control/chassis_remote_control.c"
+          },
+          {
+            "path": "../User/APP/detect_task/detect_task.c"
+          },
+          {
+            "path": "../User/APP/FreeRTOS/FreeRTOS_middleware.c"
+          },
+          {
+            "path": "../User/APP/FreeRTOS/start_task.c"
+          },
+          {
+            "path": "../User/APP/gimbal_task/gimbal_behaviour.c"
+          },
+          {
+            "path": "../User/APP/gimbal_task/gimbal_task.c"
+          },
+          {
+            "path": "../User/APP/INS_task/INS_task.c"
+          },
+          {
+            "path": "../User/APP/referee_task/referee_usart_task.c"
+          },
+          {
+            "path": "../User/APP/referee_task/referee.c"
+          },
+          {
+            "path": "../User/APP/remote_control/rc_handoff.c"
+          },
+          {
+            "path": "../User/APP/remote_control/remote_control.c"
+          },
+          {
+            "path": "../User/APP/ROS_Receive/ROS_Receive.c"
+          },
+          {
+            "path": "../User/APP/shoot/shoot.c"
+          },
+          {
+            "path": "../User/APP/user_task/user_task.c"
+          },
+          {
+            "path": "../User/APP/voltage_task/voltage_task.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "CMSIS",
+        "files": [
+          {
+            "path": "../CMSIS/stm32f4xx_it.c"
+          },
+          {
+            "path": "../CMSIS/system_stm32f4xx.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "controller",
+        "files": [
+          {
+            "path": "../User/Components/controller/pid.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "devices",
+        "files": [
+          {
+            "path": "../User/Components/devices/BMI088driver.c"
+          },
+          {
+            "path": "../User/Components/devices/BMI088Middleware.c"
+          },
+          {
+            "path": "../User/Components/devices/ist8310driver_middleware.c"
+          },
+          {
+            "path": "../User/Components/devices/ist8310driver.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "FreeRTOS",
+        "files": [
+          {
+            "path": "../FreeRTOS/croutine.c"
+          },
+          {
+            "path": "../FreeRTOS/event_groups.c"
+          },
+          {
+            "path": "../FreeRTOS/list.c"
+          },
+          {
+            "path": "../FreeRTOS/portable/MemMang/heap_4.c"
+          },
+          {
+            "path": "../FreeRTOS/portable/RVDS/ARM_CM4F/port.c"
+          },
+          {
+            "path": "../FreeRTOS/queue.c"
+          },
+          {
+            "path": "../FreeRTOS/tasks.c"
+          },
+          {
+            "path": "../FreeRTOS/timers.c"
+          },
+          {
+            "path": "../User/hardware/flash.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "FWLIB",
+        "files": [
+          {
+            "path": "../FWLIB/src/misc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_adc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_can.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_cec.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_crc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_cryp_aes.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_cryp_des.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_cryp_tdes.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_cryp.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dac.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dbgmcu.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dcmi.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dfsdm.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dma.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dma2d.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_dsi.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_exti.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_flash_ramfunc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_flash.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_fmpi2c.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_fsmc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_gpio.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_hash_md5.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_hash_sha1.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_hash.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_i2c.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_iwdg.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_lptim.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_ltdc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_pwr.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_qspi.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_rcc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_rng.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_rtc.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_sai.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_sdio.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_spdifrx.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_spi.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_syscfg.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_tim.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_usart.c"
+          },
+          {
+            "path": "../FWLIB/src/stm32f4xx_wwdg.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Hardware",
+        "files": [
+          {
+            "path": "../User/APP/CAN_receive/DM4310/DM4310.c"
+          },
+          {
+            "path": "../User/hardware/adc.c"
+          },
+          {
+            "path": "../User/hardware/bluetooth.c"
+          },
+          {
+            "path": "../User/hardware/buzzer.c"
+          },
+          {
+            "path": "../User/hardware/camera_trigger.c"
+          },
+          {
+            "path": "../User/hardware/can.c"
+          },
+          {
+            "path": "../User/hardware/delay.c"
+          },
+          {
+            "path": "../User/hardware/exit.c"
+          },
+          {
+            "path": "../User/hardware/i2c.c"
+          },
+          {
+            "path": "../User/hardware/key.c"
+          },
+          {
+            "path": "../User/hardware/led.c"
+          },
+          {
+            "path": "../User/hardware/rc.c"
+          },
+          {
+            "path": "../User/hardware/referee_usart.c"
+          },
+          {
+            "path": "../User/hardware/relays.c"
+          },
+          {
+            "path": "../User/hardware/spi.c"
+          },
+          {
+            "path": "../User/hardware/sys.c"
+          },
+          {
+            "path": "../User/hardware/temperature.c"
+          },
+          {
+            "path": "../User/hardware/trigger.c"
+          },
+          {
+            "path": "../User/hardware/uart1.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Startup",
+        "files": [
+          {
+            "path": "../Startup/startup_stm32f40_41xxx.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "support",
+        "files": [
+          {
+            "path": "../User/Components/support/CRC8_CRC16.c"
+          },
+          {
+            "path": "../User/Components/support/fifo.c"
+          },
+          {
+            "path": "../User/Components/support/mem_mang4.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "USER",
+        "files": [
+          {
+            "path": "../User/main.c"
+          },
+          {
+            "path": "../User/main.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "user_lib",
+        "files": [
+          {
+            "path": "../User/user_lib/Kalman_Filter.c"
+          },
+          {
+            "path": "../User/user_lib/user_lib.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "2445174883fa635aae009352232da7d8"
+  },
+  "targets": {
+    "Target 1": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x20000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x10000000",
+                "size": "0x10000"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x100000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32f4x",
+        "interface": "cmsis-dap",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../CMSIS",
+          "../FWLIB/inc",
+          "../Startup",
+          "../User",
+          "../User/hardware",
+          "../User/AHRS",
+          "../User/Components/algorithm",
+          "../User/Components/algorithm/Include",
+          "../User/Components/controller",
+          "../User/Components/devices",
+          "../FreeRTOS/include",
+          "../FreeRTOS/portable/RVDS/ARM_CM4F",
+          "../User/APP/FreeRTOS",
+          "../User/APP/chassis_remote_control",
+          "../User/user_lib",
+          "../User/APP/INS_task",
+          "../User/APP/user_task",
+          "../User/APP/CAN_receive",
+          "../User/APP/remote_control",
+          "../User/APP/gimbal_task",
+          "../User/APP/calibrate_task",
+          "../User/APP/shoot",
+          "../User/APP/voltage_task",
+          "../User/APP/ROS_Receive",
+          "../User/APP/referee_task",
+          "../User/Components/support",
+          ".eide/deps",
+          "../User/APP/CAN_receive/DM4310"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "STM32F40_41xxx",
+          "USE_STDPERIPH_DRIVER",
+          "__FPU_USED",
+          "__FPU_PRESENT",
+          "ARM_MATH_CM4",
+          "__CC_ARM",
+          "ARM_MATH_MATRIX_CHECK",
+          "ARM_MATH_ROUNDING"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}

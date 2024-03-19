@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "stlink",
+            "servertype": "openocd",
+            "executable": "Project\\build\\Target 1\\warrior.elf",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                // "interface/stlink.cfg",
+                "interface/daplink-swd.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            //"svdFile": "${workspaceRoot}/STM32F40x.svd",
+            "svdFile": "C:\\Users\\pxx\\AppData\\Local\\Arm\\Packs\\Keil\\STM32F4xx_DFP\\2.9.0\\CMSIS\\SVD\\STM32F40x.svd",
+        }
+    ]
+}

@@ -16,13 +16,17 @@ chassis_behaviour_e local_chassis_behaviour;
 
 void UI_Task(void *parameters)
 {
-    strcpy(ui_default_group1_Text_1->string, "WUT");
+    // strcpy(ui_default_group1_Text_1->string, "WUT");
     
     ui_init_default_group1();
+
+    strcpy(ui_default_group1_Text_1->string, "WUT");
 
     while(1)
     {
         ui_update_judge();
+
+        // ui_init_default_group1();
 
         ui_update_default_group1();
 

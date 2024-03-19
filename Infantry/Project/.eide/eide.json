@@ -572,7 +572,7 @@
       "uploadConfig": {
         "bin": "",
         "target": "stm32f4x",
-        "interface": "stlink-v2",
+        "interface": "daplink-swd",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {
