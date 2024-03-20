@@ -556,6 +556,7 @@ static void shoot_bullet_on_reset(void)
 static void shoot_limit_pwm_set(void)
 {
     uint8_t speed = get_shoot_42mm_speed_limit();
+    // uint8_t speed = 16;
     switch (speed)
     {
     case 10:

@@ -743,3 +743,8 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
         // Laser_Off();
     }
 } 
+
+gimbal_behaviour_e get_gimbal_behaviour(void)
+{
+    return gimbal_behaviour;
+}

@@ -286,4 +286,6 @@ extern void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *hea
 
 extern uint8_t get_shoot_power_status(void);
 extern uint8_t get_shoot_17mm_speed_limit(void);
+extern uint8_t get_shoot_42mm_speed_limit(void);
+
 #endif

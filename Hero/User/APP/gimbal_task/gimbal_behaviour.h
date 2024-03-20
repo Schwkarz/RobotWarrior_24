@@ -20,4 +20,5 @@ extern void gimbal_behaviour_mode_set(Gimbal_Control_t *gimbal_mode_set);
 extern void gimbal_behaviour_control_set(fp32 *add_yaw, fp32 *add_pitch, Gimbal_Control_t *gimbal_control_set);
 extern bool_t gimbal_cmd_to_chassis_stop(void);
 extern bool_t gimbal_cmd_to_shoot_stop(void);
+gimbal_behaviour_e get_gimbal_behaviour(void);
 #endif
