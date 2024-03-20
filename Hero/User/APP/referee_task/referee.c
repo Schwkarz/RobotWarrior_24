@@ -4,6 +4,8 @@
 #include "CRC8_CRC16.h"
 #include "protocol.h"
 
+uint8_t id = 100;
+
 
 frame_header_struct_t referee_receive_header;
 frame_header_struct_t referee_send_header;
@@ -251,34 +253,22 @@ void get_chassis_power_limit(fp32 *power_limit)
 
 uint8_t get_robot_id(void)
 {
+    id = robot_state.robot_id;
     return robot_state.robot_id;
 }
+
+
 
 void get_shoot_heat0_limit_and_heat0(uint16_t *heat0_limit, uint16_t *heat0)
 {
     // *heat0_limit = robot_state.shooter_id1_17mm_cooling_limit;
     *heat0_limit = robot_state.shooter_barrel_heat_limit;
-    *heat0 = power_heat_data_t.shooter_id1_17mm_cooling_heat;
-}
-
-void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *heat1)
-{
-    // *heat1_limit = robot_state.shooter_id2_17mm_cooling_limit;
-    *heat1_limit = robot_state.shooter_barrel_heat_limit;
-    *heat1 = power_heat_data_t.shooter_id2_17mm_cooling_heat;
+    *heat0 = power_heat_data_t.shooter_id1_42mm_cooling_heat;
 }
 
 uint8_t get_shoot_power_status(void)
 {
     return robot_state.power_management_shooter_output;
-}
-
-uint8_t get_shoot_17mm_speed_limit(void)
-{
-    // return robot_state.shooter_id1_17mm_speed_limit;
-
-    //24赛季射速上限恒定为30
-    return 30;
 }
 
 uint8_t get_shoot_42mm_speed_limit(void)

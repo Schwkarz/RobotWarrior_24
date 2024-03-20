@@ -43,4 +43,6 @@ extern void chassis_behaviour_mode_set(chassis_move_t* chassis_move_mode);
 extern void chassis_behaviour_control_set(fp32 *vx_set, fp32 *vy_set, fp32 *angle_set, chassis_move_t *chassis_move_rc_to_vector);
 
 bool_t rotation_cmd_gimbal_absolute(void);
+
+chassis_behaviour_e get_chasis_behaviour(void);
 #endif

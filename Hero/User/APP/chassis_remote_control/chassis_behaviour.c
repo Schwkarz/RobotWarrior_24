@@ -532,3 +532,7 @@ bool_t rotation_cmd_gimbal_absolute(void)
     }
 }
 
+chassis_behaviour_e get_chasis_behaviour(void)
+{
+    return chassis_behaviour_mode;
+}
