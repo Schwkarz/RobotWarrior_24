@@ -33,7 +33,7 @@
 // #include "detect_task.h"
 #include "referee_usart_task.h"  
 #include "ui_task.h"
-#include "music_task.h"
+
 
 #define START_TASK_PRIO 1
 #define START_STK_SIZE 128
@@ -62,14 +62,6 @@ static TaskHandle_t CalibrateTask_Handler;
 #define VOLTAGE_TASK_PRIO 11
 #define VOLTAGE_TASK_SIZE 128
 static TaskHandle_t VoltageTask_Handler;
-
-#define UI_TASK_PRIO 10
-#define UI_STK_SIZE 256
-static TaskHandle_t UITask_Handler;
-
-#define MUSIC_TASK_PRIO 10
-#define MUSIC_STK_SIZE 256
-static TaskHandle_t MUSICTask_Handler;
 
 // #define Detect_TASK_PRIO 10
 // #define Detect_STK_SIZE 128
@@ -143,26 +135,12 @@ void start_task(void *pvParameters)
           (UBaseType_t)REFEREE_TASK_PRIO,
           (TaskHandle_t *)&RefreeTask_Handler);
 
-    xTaskCreate((TaskFunction_t)imuSendTask,
-                (const char *)"imuSendTask",
-                (uint16_t)IMUSEND_STK_SIZE,
-                (void *)NULL,
-                (UBaseType_t)IMUSEND_TASK_PRIO,
-                (TaskHandle_t *)&imuSendTask_Handler);
-              
-    xTaskCreate((TaskFunction_t)UI_Task,
-              (const char *)"UITask",
-              (uint16_t)UI_STK_SIZE,
+	xTaskCreate((TaskFunction_t)imuSendTask,
+              (const char *)"imuSendTask",
+              (uint16_t)IMUSEND_STK_SIZE,
               (void *)NULL,
-              (UBaseType_t)UI_TASK_PRIO,
-              (TaskHandle_t *)&UITask_Handler);
-    
-    // xTaskCreate((TaskFunction_t)Music_Task,
-    //           (const char *)"MUSICTask",
-    //           (uint16_t)MUSIC_STK_SIZE,
-    //           (void *)NULL,
-    //           (UBaseType_t)MUSIC_TASK_PRIO,
-    //           (TaskHandle_t *)&MUSICTask_Handler);
+              (UBaseType_t)IMUSEND_TASK_PRIO,
+              (TaskHandle_t *)&imuSendTask_Handler);
 
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
