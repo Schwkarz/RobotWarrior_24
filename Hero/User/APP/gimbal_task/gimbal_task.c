@@ -32,6 +32,7 @@
 #include "CAN_Receive.h"
 // #include "Detect_Task.h"
 #include "pid.h"
+#include "buzzer.h" 
 
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
@@ -115,6 +116,7 @@ void GIMBAL_task(void *pvParameters)
 {
     //等待陀螺仪任务更新陀螺仪数据
     vTaskDelay(GIMBAL_TASK_INIT_TIME);
+    buzzer_off();
     //云台初始化
     gimbal_offset_init();
     GIMBAL_Init(&gimbal_control);

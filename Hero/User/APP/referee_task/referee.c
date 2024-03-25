@@ -250,7 +250,6 @@ void get_chassis_power_limit(fp32 *power_limit)
 
 uint8_t get_robot_id(void)
 {
-    id = robot_state.robot_id;
     return robot_state.robot_id;
 }
 

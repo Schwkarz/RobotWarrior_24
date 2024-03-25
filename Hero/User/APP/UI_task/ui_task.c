@@ -9,22 +9,26 @@
 
 void ui_update_judge();
 
-
-const Gimbal_Control_t* local_gimbal_control_t;
+const Gimbal_Control_t *local_gimbal_control_t;
 gimbal_behaviour_e local_gimbal_behaviour;
 chassis_behaviour_e local_chassis_behaviour;
 
 void UI_Task(void *parameters)
 {
     // strcpy(ui_default_group1_Text_1->string, "WUT");
-    vTaskDelay(500);
-    
-    ui_init_default_group1();
+    vTaskDelay(200);
+    for (int i = 0; i < 100; i++)
+    {
+        ui_init_default_group1();
+        vTaskDelay(10);
+    }
+    // ui_init_default_group1();
 
     strcpy(ui_default_group1_Text_1->string, "WUT");
 
-    while(1)
+    while (1)
     {
+        // ui_init_default_group1();
 
         ui_update_judge();
 
@@ -34,17 +38,16 @@ void UI_Task(void *parameters)
 
         // taskENTER_CRITICAL();
 
-        vTaskDelay(200);
+        vTaskDelay(300);
     }
 }
-
 
 void ui_update_judge()
 {
     local_gimbal_behaviour = get_gimbal_behaviour();
     local_chassis_behaviour = get_chasis_behaviour();
 
-    if(local_gimbal_behaviour == GIMBAL_AUTO_SHOOT)
+    if (local_gimbal_behaviour == GIMBAL_AUTO_SHOOT)
     {
         strcpy(ui_default_group1_Text_2->string, "AUTOAIM:ON");
     }
@@ -53,7 +56,7 @@ void ui_update_judge()
         strcpy(ui_default_group1_Text_2->string, "AUTOAIM:OFF");
     }
 
-    if(local_chassis_behaviour == CHASSIS_ROTATION)
+    if (local_chassis_behaviour == CHASSIS_ROTATION)
     {
         strcpy(ui_default_group1_Text_3->string, "ROTATE:ON");
     }

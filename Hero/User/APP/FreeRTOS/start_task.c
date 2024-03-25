@@ -23,6 +23,7 @@
 
 #include "led.h"
 #include "adc.h"
+#include "buzzer.h"
 
 #include "calibrate_task.h"
 #include "INS_task.h"
@@ -142,12 +143,16 @@ void start_task(void *pvParameters)
               (UBaseType_t)IMUSEND_TASK_PRIO,
               (TaskHandle_t *)&imuSendTask_Handler);
 
+  
+
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
 }
 
 void startTast(void)
 {
+    buzzer_on(84,10);
+
     xTaskCreate((TaskFunction_t)start_task,          //任务函数
                 (const char *)"start_task",          //任务名称
                 (uint16_t)START_STK_SIZE,            //任务堆栈大小
