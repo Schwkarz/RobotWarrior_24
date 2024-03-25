@@ -69,6 +69,7 @@
 
 #define PI_FOUR                     0.78539816339744830961566084581988f
 #define PI_TEN                      0.314f
+#define PI_TWENTY                   PI/7
 
 //拨弹轮电机PID
 #define TRIGGER_ANGLE_PID_KP        280.0f

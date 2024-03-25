@@ -276,14 +276,15 @@ static void shoot_set_mode(void)
         }
     }
 
-    // get_shoot_heat0_limit_and_heat0(&shoot_control.heat_limit, &shoot_control.heat);
-    // if((shoot_control.heat + SHOOT_HEAT_REMAIN_VALUE > shoot_control.heat_limit))
-    // {
-    //     if(shoot_control.shoot_mode == SHOOT_BULLET || shoot_control.shoot_mode == SHOOT_CONTINUE_BULLET)
-    //     {
-    //         shoot_control.shoot_mode = SHOOT_READY;
-    //     }
-    // }
+    //枪口热量限制
+    get_shoot_heat0_limit_and_heat0(&shoot_control.heat_limit, &shoot_control.heat);
+    if((shoot_control.heat + SHOOT_HEAT_REMAIN_VALUE > shoot_control.heat_limit))
+    {
+        if(shoot_control.shoot_mode == SHOOT_BULLET || shoot_control.shoot_mode == SHOOT_CONTINUE_BULLET)
+        {
+            shoot_control.shoot_mode = SHOOT_READY;
+        }
+    }
 
     //如果云台状态是 无力状态，就关闭射击
     if (gimbal_cmd_to_shoot_stop())
@@ -472,7 +473,7 @@ static void shoot_bullet_control(void)
     //每次拨动 1/4PI的角度
     if (shoot_control.move_flag == 0)
     {
-        shoot_control.set_angle = rad_format(shoot_control.angle + PI_TEN);
+        shoot_control.set_angle = rad_format(shoot_control.angle + PI_FOUR);
         shoot_control.move_flag = 1;
     }
 

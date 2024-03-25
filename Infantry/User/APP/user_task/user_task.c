@@ -58,6 +58,7 @@ const shoot_control_t* local_shoot;
 KalmanInfo Power_KalmanInfo_Structure;
 
 fp32 local_power = 0, local_buffer = 0;
+uint8_t robot_id = 0;
 
 
 extern int8_t temp_set;
@@ -150,7 +151,9 @@ void UserTask(void *pvParameters)
 
         //获取陀螺仪数据
         // printf("%.2f, %.2f, %.2f\n",local_INS_accel[0],local_INS_accel[1],local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f);
-        // taskEXIT_CRITICAL();
+
+        robot_id = get_robot_id();
+
         vTaskDelay(10);
 #if INCLUDE_uxTaskGetStackHighWaterMark
         UserTaskStack = uxTaskGetStackHighWaterMark(NULL);

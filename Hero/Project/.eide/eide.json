@@ -13,10 +13,10 @@
         "name": "algorithm",
         "files": [
           {
-            "path": "../User/Components/algorithm/AHRS.lib"
+            "path": "../User/Components/algorithm/AHRS_middleware.c"
           },
           {
-            "path": "../User/Components/algorithm/AHRS_middleware.c"
+            "path": "../User/Components/algorithm/AHRS.lib"
           },
           {
             "path": "../User/Components/algorithm/arm_cortexM4lf_math.lib"
@@ -59,6 +59,9 @@
           },
           {
             "path": "../User/APP/INS_task/INS_task.c"
+          },
+          {
+            "path": "../User/APP/music_task/music_task.c"
           },
           {
             "path": "../User/APP/referee_task/referee_usart_task.c"
@@ -604,7 +607,8 @@
           ".eide/deps",
           "../User/APP/CAN_receive/DM4310",
           "../User/APP/UI_task",
-          "../User/APP/nuaa_ui"
+          "../User/APP/nuaa_ui",
+          "../User/APP/music_task"
         ],
         "libList": [],
         "sourceDirList": [],

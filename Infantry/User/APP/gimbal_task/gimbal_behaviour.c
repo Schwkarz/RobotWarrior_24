@@ -36,7 +36,7 @@
 //#define GIMBALWarnBuzzerOFF() buzzer_off()
 
 #define int_abs(x) ((x) > 0 ? (x) : (-x))
-uint8_t init_step = 3;// 第一次上电，3:1减速比找中值
+uint8_t init_step = 0;// 第一次上电，3:1减速比找中值
 KalmanInfo accel_x_kalman;
 KalmanInfo accel_y_kalman; 
 /**
@@ -845,8 +845,8 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
     {
         return;
     }
-    *yaw = 0.0f;
-    *pitch = 0.0f;
+    // *yaw = 0.0f;
+    // *pitch = 0.0f;
 
     // fp32 add_pitch = 0.0f, add_yaw = 0.0f;
     // Get_Gimbal_Angle(&add_yaw, &add_pitch);
@@ -863,6 +863,10 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
     fp32 set_yaw = 0.0f, set_pitch = 0.0f;
     if(gimbal_control_set->gimbal_ros_msg->shoot_depth != 0)
     {
+        //当确认瞄到装甲板时，才清空控制量
+        *yaw = 0.0f;
+        *pitch = 0.0f;
+
         Laser_On();
         set_yaw = gimbal_control_set->gimbal_ros_msg->shoot_yaw;
         set_pitch = gimbal_control_set->gimbal_ros_msg->shoot_pitch;
