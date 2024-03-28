@@ -55,10 +55,6 @@ KalmanInfo Power_KalmanInfo_Structure;
 extern int8_t temp_set;
 const shoot_control_t* local_shoot_control;
 
-uint8_t robot_id = 100;
-uint16_t *heat0_limit, *heat0;
-fp32 *power,*power_buffer;
-
 fp32 local_power = 0.0f, local_buffer = 0.0f;
 
 fp32 Power_Calc(void);
@@ -95,7 +91,7 @@ void UserTask(void *pvParameters)
         // printf("%f, %f\n", local_gimbal_control->gimbal_pitch_motor.relative_angle, local_gimbal_control->gimbal_pitch_motor.absolute_angle);
 
 		//从裁判系统获取底盘功率
-        get_chassis_power_and_buffer(&local_power, &local_buffer);
+        // get_chassis_power_and_buffer(&local_power, &local_buffer);
         // printf("%.2f, %.2f\n", local_power, local_buffer);
 
         //姿态角
@@ -117,7 +113,7 @@ void UserTask(void *pvParameters)
         // local_gimbal_control->gimbal_pitch_motor.motor_gyro * 10, local_gimbal_control->gimbal_pitch_motor.motor_gyro_set * 10);
 
         // 拨弹轮电机pid
-        // printf("%f, %f, %f\n", local_shoot_control->speed, local_shoot_control->speed_set, local_shoot_control->angle);
+        printf("%f, %f, %f\n", local_shoot_control->speed, local_shoot_control->speed_set, local_shoot_control->angle);
 
         //底盘跟随云台角度pid调参
         // printf("%.2f, %.2f\n", local_chassis_move->chassis_relative_angle * 57.3f, local_chassis_move->chassis_relative_angle_set * 57.3f);
@@ -132,11 +128,6 @@ void UserTask(void *pvParameters)
 
         //蓝牙测试
         // Bluetooth_Send("%f",Power_Calc());
-
-        // robot_id = get_robot_id();
-        // get_shoot_heat0_limit_and_heat0(heat0_limit,heat0);
-        // get_chassis_power_and_buffer(power,power_buffer);
-
         Relays_Judge();
 
         vTaskDelay(10);

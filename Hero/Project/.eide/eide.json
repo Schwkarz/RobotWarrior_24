@@ -61,9 +61,6 @@
             "path": "../User/APP/INS_task/INS_task.c"
           },
           {
-            "path": "../User/APP/music_task/music_task.c"
-          },
-          {
             "path": "../User/APP/referee_task/referee_usart_task.c"
           },
           {
@@ -559,7 +556,7 @@
       "uploadConfig": {
         "bin": "",
         "target": "stm32f4x",
-        "interface": "daplink-swd",
+        "interface": "cmsis-dap-v1",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {
@@ -607,8 +604,7 @@
           ".eide/deps",
           "../User/APP/CAN_receive/DM4310",
           "../User/APP/UI_task",
-          "../User/APP/nuaa_ui",
-          "../User/APP/music_task"
+          "../User/APP/nuaa_ui"
         ],
         "libList": [],
         "sourceDirList": [],

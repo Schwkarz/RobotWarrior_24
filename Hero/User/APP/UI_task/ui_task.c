@@ -3,6 +3,7 @@
 #include "task.h"
 
 #include "ui.h"
+#include "ui_interface.h"
 
 #include "gimbal_behaviour.h"
 #include "chassis_behaviour.h"

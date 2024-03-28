@@ -23,7 +23,6 @@
 
 #include "led.h"
 #include "adc.h"
-#include "buzzer.h"
 
 #include "calibrate_task.h"
 #include "INS_task.h"
@@ -63,6 +62,10 @@ static TaskHandle_t CalibrateTask_Handler;
 #define VOLTAGE_TASK_PRIO 11
 #define VOLTAGE_TASK_SIZE 128
 static TaskHandle_t VoltageTask_Handler;
+
+#define UI_TASK_PRIO 10
+#define UI_STK_SIZE 256
+static TaskHandle_t UITask_Handler;
 
 // #define Detect_TASK_PRIO 10
 // #define Detect_STK_SIZE 128
@@ -129,12 +132,12 @@ void start_task(void *pvParameters)
     //             (UBaseType_t)Detect_TASK_PRIO,
     //             (TaskHandle_t *)&DetectTask_Handler);
 
-    xTaskCreate((TaskFunction_t)referee_usart_task,
-          (const char *)"RefereeTask",
-          (uint16_t)REFEREE_STK_SIZE,
-          (void *)NULL,
-          (UBaseType_t)REFEREE_TASK_PRIO,
-          (TaskHandle_t *)&RefreeTask_Handler);
+	xTaskCreate((TaskFunction_t)referee_usart_task,
+				(const char *)"RefereeTask",
+				(uint16_t)REFEREE_STK_SIZE,
+				(void *)NULL,
+				(UBaseType_t)REFEREE_TASK_PRIO,
+				(TaskHandle_t *)&RefreeTask_Handler);
 
 	xTaskCreate((TaskFunction_t)imuSendTask,
               (const char *)"imuSendTask",
@@ -142,8 +145,14 @@ void start_task(void *pvParameters)
               (void *)NULL,
               (UBaseType_t)IMUSEND_TASK_PRIO,
               (TaskHandle_t *)&imuSendTask_Handler);
+              
 
-  
+    xTaskCreate((TaskFunction_t)UI_Task,
+              (const char *)"UITask",
+              (uint16_t)UI_STK_SIZE,
+              (void *)NULL,
+              (UBaseType_t)UI_TASK_PRIO,
+              (TaskHandle_t *)&UITask_Handler);
 
     vTaskDelete(StartTask_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
@@ -151,8 +160,6 @@ void start_task(void *pvParameters)
 
 void startTast(void)
 {
-    buzzer_on(84,10);
-
     xTaskCreate((TaskFunction_t)start_task,          //任务函数
                 (const char *)"start_task",          //任务名称
                 (uint16_t)START_STK_SIZE,            //任务堆栈大小

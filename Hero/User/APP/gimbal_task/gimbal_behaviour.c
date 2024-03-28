@@ -461,6 +461,7 @@ static void gimbal_behavour_set(Gimbal_Control_t *gimbal_mode_set)
         {
             gimbal_behaviour = GIMBAL_INIT;
             buzzer_on(84, 10);
+            enable_motor_mode(1, MIT_MODE);
         }
         last_gimbal_behaviour = gimbal_behaviour;
     }

@@ -4,6 +4,9 @@
 #include "CRC8_CRC16.h"
 #include "protocol.h"
 
+uint8_t id = 100;
+
+
 frame_header_struct_t referee_receive_header;
 frame_header_struct_t referee_send_header;
 
@@ -250,6 +253,7 @@ void get_chassis_power_limit(fp32 *power_limit)
 
 uint8_t get_robot_id(void)
 {
+    id = robot_state.robot_id;
     return robot_state.robot_id;
 }
 

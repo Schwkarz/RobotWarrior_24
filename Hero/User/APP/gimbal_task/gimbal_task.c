@@ -32,7 +32,6 @@
 #include "CAN_Receive.h"
 // #include "Detect_Task.h"
 #include "pid.h"
-#include "buzzer.h" 
 
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
@@ -116,7 +115,6 @@ void GIMBAL_task(void *pvParameters)
 {
     //等待陀螺仪任务更新陀螺仪数据
     vTaskDelay(GIMBAL_TASK_INIT_TIME);
-    buzzer_off();
     //云台初始化
     gimbal_offset_init();
     GIMBAL_Init(&gimbal_control);
@@ -154,11 +152,9 @@ void GIMBAL_task(void *pvParameters)
         Shoot_Can_Set_Current = -Shoot_Can_Set_Current;
 #endif
 
-        
-
         CAN_CMD_GIMBAL(Yaw_Can_Set_Current, 0, Shoot_Can_Set_Current, 0);
         mit_ctrl(1, 0, 0, 0, 0, Pitch_Can_Set_Current);
-
+        
         //云台在遥控器掉线状态即relax 状态，can指令为0，不使用current设置为零的方法，是保证遥控器掉线一定使得云台停止
         // if (!(toe_is_error(YawGimbalMotorTOE) && toe_is_error(PitchGimbalMotorTOE) && toe_is_error(TriggerMotorTOE)))
         // {
@@ -808,7 +804,7 @@ const Gimbal_Control_t *get_gimbal_control_point(void)
 
 void gimbal_offset_init(void)
 {
-    gimbal_control.gimbal_yaw_motor.offset_ecd = 4169;
+    gimbal_control.gimbal_yaw_motor.offset_ecd = 4140;
     gimbal_control.gimbal_yaw_motor.max_relative_angle = PI/3;
     gimbal_control.gimbal_yaw_motor.min_relative_angle = -PI/3;
 
