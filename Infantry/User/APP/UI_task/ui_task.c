@@ -16,9 +16,10 @@ chassis_behaviour_e local_chassis_behaviour;
 
 void UI_Task(void *parameters)
 {
-    // strcpy(ui_default_group1_Text_1->string, "WUT");
-    
-    ui_init_default_group1();
+    for(int i = 0; i <50; i++)
+    {
+            ui_init_default_group1();
+    }
 
     strcpy(ui_default_group1_Text_1->string, "WUT");
 
@@ -26,11 +27,9 @@ void UI_Task(void *parameters)
     {
         ui_update_judge();
 
-        // ui_init_default_group1();
-
         ui_update_default_group1();
 
-        vTaskDelay(100);
+        vTaskDelay(200);
     }
 }
 

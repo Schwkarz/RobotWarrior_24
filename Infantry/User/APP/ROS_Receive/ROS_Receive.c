@@ -22,6 +22,7 @@ static ROS_Msg_t ROS_Msg;
 void UART_to_ROS_Msg(uint8_t *uart_buf, ROS_Msg_t *ros_msg);
 
 static void Send_Gimbal_Angle(float yaw, float pitch, uint8_t c);
+
 const volatile fp32 *local_imu_angle;
 
 void imuSendTask(void *pvParameters)

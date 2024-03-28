@@ -176,6 +176,8 @@ void INSTask(void *pvParameters)
 
     BMI088_read(bmi088_real_data.gyro, bmi088_real_data.accel, &bmi088_real_data.temp);
 
+
+
     imu_cali_solve(INS_gyro, INS_accel, INS_mag, &bmi088_real_data, &ist8310_real_data);
 
     AHRS_init(INS_quat, INS_accel, INS_mag);
@@ -534,3 +536,9 @@ void EXTI1_IRQHandler(void)
 	EXTI_ClearITPendingBit(EXTI_Line1);
 }
 #endif
+
+
+void Send_IMU_RawData()
+{
+    printf("%02f ,%02f ,%02f\r\n",bmi088_real_data.gyro[0],bmi088_real_data.gyro[1],bmi088_real_data.gyro[2]);
+}

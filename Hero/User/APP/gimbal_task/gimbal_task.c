@@ -154,9 +154,11 @@ void GIMBAL_task(void *pvParameters)
         Shoot_Can_Set_Current = -Shoot_Can_Set_Current;
 #endif
 
+        
+
         CAN_CMD_GIMBAL(Yaw_Can_Set_Current, 0, Shoot_Can_Set_Current, 0);
         mit_ctrl(1, 0, 0, 0, 0, Pitch_Can_Set_Current);
-        
+
         //云台在遥控器掉线状态即relax 状态，can指令为0，不使用current设置为零的方法，是保证遥控器掉线一定使得云台停止
         // if (!(toe_is_error(YawGimbalMotorTOE) && toe_is_error(PitchGimbalMotorTOE) && toe_is_error(TriggerMotorTOE)))
         // {

@@ -42,11 +42,16 @@
 #include "voltage_task.h"
 #include "Kalman_Filter.h"
 #include "bluetooth.h"
+#include "trigger.h"
 //#define user_is_error() toe_is_error(errorListLength)
 
 #if INCLUDE_uxTaskGetStackHighWaterMark
 uint32_t UserTaskStack;
 #endif
+
+
+#define shoot_fric1_on(pwm) fric1_on((pwm))
+#define shoot_fric2_on(pwm) fric2_on((pwm))
 
 //姿态角 单位 度
 fp32 angle_degree[3] = {0.0f, 0.0f, 0.0f};
@@ -152,9 +157,9 @@ void UserTask(void *pvParameters)
         //获取陀螺仪数据
         // printf("%.2f, %.2f, %.2f\n",local_INS_accel[0],local_INS_accel[1],local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f);
 
-        robot_id = get_robot_id();
-
+        
         vTaskDelay(10);
+
 #if INCLUDE_uxTaskGetStackHighWaterMark
         UserTaskStack = uxTaskGetStackHighWaterMark(NULL);
 #endif

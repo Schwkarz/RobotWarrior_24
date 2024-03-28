@@ -435,10 +435,10 @@
         "name": "user_lib",
         "files": [
           {
-            "path": "../User/user_lib/user_lib.c"
+            "path": "../User/user_lib/Kalman_Filter.c"
           },
           {
-            "path": "../User/user_lib/Kalman_Filter.c"
+            "path": "../User/user_lib/user_lib.c"
           }
         ],
         "folders": []
@@ -585,6 +585,23 @@
           },
           "proType": 1,
           "speed": 8000,
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "stm32f4x",
+          "interface": "stlink",
+          "baseAddr": "0x08000000"
+        },
+        "STLink": {
+          "bin": "",
+          "proType": "SWD",
+          "resetMode": "default",
+          "runAfterProgram": true,
+          "speed": 4000,
+          "address": "0x8000000",
+          "elFile": "None",
+          "optionBytes": ".eide/target 1.st.option.bytes.ini",
           "otherCmds": ""
         }
       },

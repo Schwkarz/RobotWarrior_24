@@ -79,5 +79,6 @@ extern const fp32 *get_gyro_data_point(void);
 extern const fp32 *get_accel_data_point(void);
 extern const fp32 *get_mag_data_point(void);
 extern const fp32 *get_accel_filter_point(void);
+void Send_IMU_RawData();
 
 #endif

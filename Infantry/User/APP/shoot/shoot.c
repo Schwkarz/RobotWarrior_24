@@ -180,6 +180,8 @@ int16_t shoot_control_loop(void)
 
     shoot_control.fric_pwm1 = (uint16_t)(shoot_control.fric1_ramp.out);
     shoot_control.fric_pwm2 = (uint16_t)(shoot_control.fric2_ramp.out);
+
+
     shoot_fric1_on(shoot_control.fric_pwm1);
     shoot_fric2_on(shoot_control.fric_pwm2);
 
@@ -518,7 +520,7 @@ static void shoot_limit_pwm_set(void)
         shoot_control.fric1_ramp.max_value = 1690;
         break;
     case 30:
-        shoot_control.fric1_ramp.max_value = 2000;
+        shoot_control.fric1_ramp.max_value = 1950;
         break;
     default:
         shoot_control.fric1_ramp.max_value = 1900;

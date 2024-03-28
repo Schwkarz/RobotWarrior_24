@@ -233,6 +233,7 @@ static void CAN_hook(CanRxMsg *rx_message)
         DMMotor.pos = uint_to_float(DMMotor.pos_int, P_MIN, P_MAX, 16);
         DMMotor.vel = uint_to_float(DMMotor.vel_int, V_MIN, V_MAX, 12);
         DMMotor.tor = uint_to_float(DMMotor.tor_int, T_MIN, T_MAX, 12);
+
         break;
     }
 

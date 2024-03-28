@@ -7,8 +7,9 @@
 
 #include <stdio.h>
 #include "ui_types.h"
+#include "referee.h"
 
-#define UI_SELF_ID 1
+#define UI_SELF_ID get_robot_id()
 
 void print_message(const uint8_t* message, int length);
 void UART6_Send_Data(uint8_t* data, int len);

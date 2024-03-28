@@ -59,7 +59,7 @@
 #define MOTOR_SPEED_TO_CHASSIS_SPEED_VY 0.25f
 #define MOTOR_SPEED_TO_CHASSIS_SPEED_WZ 0.25f
 
-#define MOTOR_DISTANCE_TO_CENTER 0.2f
+#define MOTOR_DISTANCE_TO_CENTER 0.346f
 
 //底盘任务控制间隔 2ms
 #define CHASSIS_CONTROL_TIME_MS 2
@@ -89,12 +89,12 @@
 //底盘运动过程最大平移速度
 #define NORMAL_MAX_CHASSIS_SPEED_Y 3.9f
 //底盘设置旋转速度，设置前后左右轮不同设定速度的比例分权 0为在几何中心，不需要补偿
-#define CHASSIS_WZ_SET_SCALE 0.1f //510.3 346.1
+#define CHASSIS_WZ_SET_SCALE 0.0f //510.3 346.1
 //底盘控制任务周期
 #define CHASSIS_CTL_TIME 2
 
 //小陀螺旋转速度
-#define ROTATION_SPEED_MAX 5.0f
+#define ROTATION_SPEED_MAX PI
 #define ROTATION_SPEED_ADD_VALUE ROTATION_SPEED_MAX
 
 
