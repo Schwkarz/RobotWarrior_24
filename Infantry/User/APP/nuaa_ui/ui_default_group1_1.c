@@ -20,9 +20,9 @@ void _ui_init_default_group1_1() {
     ui_default_group1_1.option.operate_tpyel = 1;
     ui_default_group1_1.option.figure_tpye = 7;
     ui_default_group1_1.option.layer = 0;
-    ui_default_group1_1.option.font_size = 45;
-    ui_default_group1_1.option.start_x = 250;
-    ui_default_group1_1.option.start_y = 600;
+    ui_default_group1_1.option.font_size = 35;
+    ui_default_group1_1.option.start_x = 380;
+    ui_default_group1_1.option.start_y = 800;
     ui_default_group1_1.option.color = 7;
     ui_default_group1_1.option.str_length = 5;
     ui_default_group1_1.option.width = 5;

@@ -483,7 +483,9 @@ static void shoot_bullet_control(void)
     if (shoot_control.move_flag == Bullet_Alraedy)
     {
         //拨动pi/6的角度，发射一颗子弹
-        shoot_control.set_angle = rad_format(shoot_control.angle - PI_SIX);
+        // shoot_control.set_angle = rad_format(shoot_control.angle - PI_SIX);
+        shoot_control.set_angle = rad_format(shoot_control.angle - ANGLE_ONE_SHOOT_HERO);
+
         //切换模式，开始子弹射击
         shoot_control.move_flag = Start_Shoot_bullet;
     }

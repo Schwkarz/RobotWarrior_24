@@ -11,11 +11,11 @@
 #define FRAME_OBJ_NUM 5
 
 CAT(ui_, CAT(FRAME_OBJ_NUM, _frame_t)) ui_default_group0_0;
-ui_interface_round_t *ui_default_group0_shoot_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[0]);
-ui_interface_round_t *ui_default_group0_autoaim_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[1]);
-ui_interface_round_t *ui_default_group0_rotation_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[2]);
-ui_interface_round_t *ui_default_group0_null2 = (ui_interface_round_t *)&(ui_default_group0_0.data[3]);
-ui_interface_round_t *ui_default_group0_null1 = (ui_interface_round_t *)&(ui_default_group0_0.data[4]);
+ui_interface_round_t *ui_default_group0_null2 = (ui_interface_round_t *)&(ui_default_group0_0.data[0]);
+ui_interface_round_t *ui_default_group0_null1 = (ui_interface_round_t *)&(ui_default_group0_0.data[1]);
+ui_interface_round_t *ui_default_group0_shoot_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[2]);
+ui_interface_round_t *ui_default_group0_autoaim_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[3]);
+ui_interface_round_t *ui_default_group0_rotation_flag = (ui_interface_round_t *)&(ui_default_group0_0.data[4]);
 
 void _ui_init_default_group0_0() {
     for (int i = 0; i < OBJ_NUM; i++) {
@@ -27,6 +27,22 @@ void _ui_init_default_group0_0() {
     for (int i = OBJ_NUM; i < FRAME_OBJ_NUM; i++) {
         ui_default_group0_0.data[i].operate_tpyel = 0;
     }
+
+    ui_default_group0_null2->figure_tpye = 2;
+    ui_default_group0_null2->layer = 9;
+    ui_default_group0_null2->r = 12;
+    ui_default_group0_null2->start_x = 585;
+    ui_default_group0_null2->start_y = 550;
+    ui_default_group0_null2->color = 3;
+    ui_default_group0_null2->width = 0;
+
+    ui_default_group0_null1->figure_tpye = 2;
+    ui_default_group0_null1->layer = 9;
+    ui_default_group0_null1->r = 12;
+    ui_default_group0_null1->start_x = 600;
+    ui_default_group0_null1->start_y = 400;
+    ui_default_group0_null1->color = 3;
+    ui_default_group0_null1->width = 0;
 
     ui_default_group0_shoot_flag->figure_tpye = 2;
     ui_default_group0_shoot_flag->layer = 9;
@@ -51,22 +67,6 @@ void _ui_init_default_group0_0() {
     ui_default_group0_rotation_flag->start_y = 580;
     ui_default_group0_rotation_flag->color = 3;
     ui_default_group0_rotation_flag->width = 30;
-
-    ui_default_group0_null2->figure_tpye = 2;
-    ui_default_group0_null2->layer = 9;
-    ui_default_group0_null2->r = 12;
-    ui_default_group0_null2->start_x = 500;
-    ui_default_group0_null2->start_y = 400;
-    ui_default_group0_null2->color = 3;
-    ui_default_group0_null2->width = 0;
-
-    ui_default_group0_null1->figure_tpye = 2;
-    ui_default_group0_null1->layer = 9;
-    ui_default_group0_null1->r = 12;
-    ui_default_group0_null1->start_x = 600;
-    ui_default_group0_null1->start_y = 400;
-    ui_default_group0_null1->color = 3;
-    ui_default_group0_null1->width = 0;
 
 
     CAT(ui_proc_, CAT(FRAME_OBJ_NUM, _frame))(&ui_default_group0_0);

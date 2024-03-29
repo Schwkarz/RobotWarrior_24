@@ -14,7 +14,7 @@ uint8_t seq = 0;
 //     printf("\n\n");
 // }
 
-void UART6_Send_Data(uint8_t* data, int len) {
+void UART6_Send_Data(const uint8_t* data,const int len) {
     for (int i = 0; i < len; i++) {
         while(USART_GetFlagStatus(USART6, USART_FLAG_TXE) == RESET); // 等待上一次数据发送完成
         USART_SendData(USART6, data[i]); // 发送一个字节的数据

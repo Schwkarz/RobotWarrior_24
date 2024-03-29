@@ -477,7 +477,7 @@ static void shoot_bullet_control(void)
     //每次拨动 1/4PI的角度
     if (shoot_control.move_flag == 0)
     {
-        shoot_control.set_angle = rad_format(shoot_control.angle + PI_FOUR);
+        shoot_control.set_angle = rad_format(shoot_control.angle + ONE_SHOOT_INFANTRY);
         shoot_control.move_flag = 1;
     }
 
@@ -522,7 +522,7 @@ static void shoot_limit_pwm_set(void)
         shoot_control.fric1_ramp.max_value = 1690;
         break;
     case 30:
-        shoot_control.fric1_ramp.max_value = 1950;
+        shoot_control.fric1_ramp.max_value = 1990;
         break;
     default:
         shoot_control.fric1_ramp.max_value = 1900;

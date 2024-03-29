@@ -4,8 +4,9 @@
 
 #include "ui_interface.h"
 #include <string.h>
-#include "main.h"
 #include "stm32f4xx.h"
+#include "referee.h"
+
 uint8_t seq = 0;
 
 void print_message(const uint8_t *message, const int length) {
@@ -14,6 +15,7 @@ void print_message(const uint8_t *message, const int length) {
     }
     printf("\n\n");
 }
+
 void UART6_Send_Data(uint8_t* data, int len) {
     for (int i = 0; i < len; i++) {
         while(USART_GetFlagStatus(USART6, USART_FLAG_TXE) == RESET); // 等待上一次数据发送完成
@@ -109,8 +111,8 @@ void ui_proc_ ## num##_frame(ui_ ## num##_frame_t *msg) {   \
     msg->header.crc8 = calc_crc8((uint8_t*)msg, 4);        \
     msg->header.cmd_id = 0x0301;                            \
     msg->header.sub_id = id;                                \
-    msg->header.send_id = UI_SELF_ID;                       \
-    msg->header.recv_id = UI_SELF_ID + 256;                 \
+    msg->header.send_id = ui_self_id;                       \
+    msg->header.recv_id = ui_self_id + 256;                 \
     msg->crc16 = calc_crc16((uint8_t*)msg, 13 + 15 * num); \
 }
 
@@ -126,8 +128,8 @@ void ui_proc_string_frame(ui_string_frame_t *msg) {
     msg->header.crc8 = calc_crc8((uint8_t *) msg, 4);
     msg->header.cmd_id = 0x0301;
     msg->header.sub_id = 0x0110;
-    msg->header.send_id = UI_SELF_ID;
-    msg->header.recv_id = UI_SELF_ID + 256;
+    msg->header.send_id = ui_self_id;
+    msg->header.recv_id = ui_self_id + 256;
     msg->option.str_length = strlen(msg->option.string);
     msg->crc16 = calc_crc16((uint8_t *) msg, 58);
 }

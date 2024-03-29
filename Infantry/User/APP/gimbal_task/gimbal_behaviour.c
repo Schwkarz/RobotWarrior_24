@@ -502,7 +502,7 @@ static void gimbal_behavour_set(Gimbal_Control_t *gimbal_mode_set)
                 //     vy += local_accel[1];
                 // printf("%.2f,%.2f\r\n",local_accel[0],local_accel[1]);
 
-                if(yaw_ecd_cali_time > 100)
+                if(yaw_ecd_cali_time > 115)
                 {
                     //vx,vy判断时要加绝对值
                     //多次测试发现，ecd=2时，k在负一左右，ecd=1时，k在1左右，适用于2024.3新版步兵

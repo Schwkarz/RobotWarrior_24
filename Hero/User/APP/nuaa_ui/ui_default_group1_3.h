@@ -7,11 +7,7 @@
 
 #include "ui_interface.h"
 
-extern ui_interface_line_t *ui_default_group1_line_1;
-extern ui_interface_line_t *ui_default_group1_line_2;
-extern ui_interface_line_t *ui_default_group1_line_3;
-extern ui_interface_line_t *ui_default_group1_line4;
-extern ui_interface_line_t *ui_default_group1_line5;
+extern ui_interface_string_t *ui_default_group1_NewText;
 
 void _ui_init_default_group1_3();
 void _ui_update_default_group1_3();

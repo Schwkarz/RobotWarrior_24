@@ -26,7 +26,7 @@
 
 // #define POWER_LIMIT         80.0f
 #define WARNING_POWER       80.0f   
-#define WARNING_POWER_BUFF  20.0f   
+#define WARNING_POWER_BUFF  30.0f   
 
 #define NO_JUDGE_TOTAL_CURRENT_LIMIT    64000.0f    //16000 * 4, 
 #define BUFFER_TOTAL_CURRENT_LIMIT      16000.0f

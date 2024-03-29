@@ -30,10 +30,10 @@ void _ui_init_default_group1_4() {
 
     ui_default_group1_line_1->figure_tpye = 0;
     ui_default_group1_line_1->layer = 0;
-    ui_default_group1_line_1->start_x = 800;
-    ui_default_group1_line_1->start_y = 520;
-    ui_default_group1_line_1->end_x = 1121;
-    ui_default_group1_line_1->end_y = 520;
+    ui_default_group1_line_1->start_x = 880;
+    ui_default_group1_line_1->start_y = 540;
+    ui_default_group1_line_1->end_x = 1039;
+    ui_default_group1_line_1->end_y = 540;
     ui_default_group1_line_1->color = 2;
     ui_default_group1_line_1->width = 5;
 
@@ -48,19 +48,19 @@ void _ui_init_default_group1_4() {
 
     ui_default_group1_line_3->figure_tpye = 0;
     ui_default_group1_line_3->layer = 0;
-    ui_default_group1_line_3->start_x = 850;
-    ui_default_group1_line_3->start_y = 450;
-    ui_default_group1_line_3->end_x = 1070;
-    ui_default_group1_line_3->end_y = 450;
+    ui_default_group1_line_3->start_x = 920;
+    ui_default_group1_line_3->start_y = 410;
+    ui_default_group1_line_3->end_x = 1011;
+    ui_default_group1_line_3->end_y = 410;
     ui_default_group1_line_3->color = 2;
     ui_default_group1_line_3->width = 5;
 
     ui_default_group1_line4->figure_tpye = 0;
     ui_default_group1_line4->layer = 0;
-    ui_default_group1_line4->start_x = 945;
-    ui_default_group1_line4->start_y = 300;
-    ui_default_group1_line4->end_x = 945;
-    ui_default_group1_line4->end_y = 540;
+    ui_default_group1_line4->start_x = 965;
+    ui_default_group1_line4->start_y = 250;
+    ui_default_group1_line4->end_x = 965;
+    ui_default_group1_line4->end_y = 538;
     ui_default_group1_line4->color = 2;
     ui_default_group1_line4->width = 3;
 

@@ -11,7 +11,7 @@
 
 ui_string_frame_t ui_default_group1_2;
 
-ui_interface_string_t* ui_default_group1_Text_3 = &ui_default_group1_2.option;
+ui_interface_string_t* ui_default_group1_autoaim_str = &ui_default_group1_2.option;
 
 void _ui_init_default_group1_2() {
     ui_default_group1_2.option.figure_name[0] = FRAME_ID;
@@ -20,13 +20,13 @@ void _ui_init_default_group1_2() {
     ui_default_group1_2.option.operate_tpyel = 1;
     ui_default_group1_2.option.figure_tpye = 7;
     ui_default_group1_2.option.layer = 0;
-    ui_default_group1_2.option.font_size = 50;
-    ui_default_group1_2.option.start_x = 360;
-    ui_default_group1_2.option.start_y = 150;
-    ui_default_group1_2.option.color = 0;
-    ui_default_group1_2.option.str_length = 4;
-    ui_default_group1_2.option.width = 5;
-    strcpy(ui_default_group1_Text_3->string, "Text");
+    ui_default_group1_2.option.font_size = 35;
+    ui_default_group1_2.option.start_x = 325;
+    ui_default_group1_2.option.start_y = 700;
+    ui_default_group1_2.option.color = 7;
+    ui_default_group1_2.option.str_length = 7;
+    ui_default_group1_2.option.width = 4;
+    strcpy(ui_default_group1_autoaim_str->string, "AUTOAIM");
 
     ui_proc_string_frame(&ui_default_group1_2);
     SEND_MESSAGE((uint8_t *) &ui_default_group1_2, sizeof(ui_default_group1_2));

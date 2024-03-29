@@ -73,6 +73,7 @@
 #define PI_TEN                      0.314f
 #define PI_FIFTY                    0.0628f
 #define PI_SIX                      0.47759877559829887307710723054658f
+#define ANGLE_ONE_SHOOT_HERO        0.40694205357380741430863256260097f //pi/7.7
 
 
 //拨弹轮电机PID

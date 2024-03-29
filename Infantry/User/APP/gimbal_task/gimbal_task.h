@@ -36,8 +36,8 @@
 
 //pitch 角度环 角度由陀螺仪解算 PID参数以及 PID最大输出，积分输出
 //20 0.01 0.6
-#define PITCH_GYRO_ABSOLUTE_PID_KP 38.f
-#define PITCH_GYRO_ABSOLUTE_PID_KI 8.0f
+#define PITCH_GYRO_ABSOLUTE_PID_KP 35.0f
+#define PITCH_GYRO_ABSOLUTE_PID_KI 7.9f
 #define PITCH_GYRO_ABSOLUTE_PID_KD 0.0f
 #define PITCH_GYRO_ABSOLUTE_PID_MAX_OUT 10.0f
 #define PITCH_GYRO_ABSOLUTE_PID_MAX_IOUT 1.0f
@@ -95,7 +95,7 @@
 #define Pitch_RC_SEN -0.000006f
 //yaw,pitch角度和鼠标输入的比例
 #define Yaw_Mouse_Sen 0.000010f
-#define Pitch_Mouse_Sen 0.000015f
+#define Pitch_Mouse_Sen 0.00002f
 //云台编码器控制时候使用的比例
 #define Yaw_Encoder_Sen 0.01f
 #define Pitch_Encoder_Sen 0.01f
@@ -115,12 +115,12 @@
 #define Half_ecd_range 4096
 #define ecd_range 8191
 //云台初始化回中值，允许的误差,并且在误差范围内停止一段时间以及最大时间6s后解除初始化状态，
-#define GIMBAL_INIT_ANGLE_ERROR 0.05f   //2024.3.2之前是0.05
+#define GIMBAL_INIT_ANGLE_ERROR 0.05f  
 #define GIMBAL_INIT_STOP_TIME 100
-#define GIMBAL_INIT_TIME 6000 //2024.3.2之前是6000
+#define GIMBAL_INIT_TIME 6000 
 //云台初始化回中值的速度以及控制到的角度
 #define GIMBAL_INIT_PITCH_SPEED 0.003f
-#define GIMBAL_INIT_YAW_SPEED   0.006f  //2024.3.2之前是0.006f
+#define GIMBAL_INIT_YAW_SPEED   0.006f
 #define INIT_YAW_SET 0.0f
 #define INIT_PITCH_SET 0.0f
 

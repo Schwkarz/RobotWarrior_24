@@ -20,9 +20,9 @@ void _ui_init_default_group1_3() {
     ui_default_group1_3.option.operate_tpyel = 1;
     ui_default_group1_3.option.figure_tpye = 7;
     ui_default_group1_3.option.layer = 0;
-    ui_default_group1_3.option.font_size = 45;
-    ui_default_group1_3.option.start_x = 200;
-    ui_default_group1_3.option.start_y = 400;
+    ui_default_group1_3.option.font_size = 35;
+    ui_default_group1_3.option.start_x = 300;
+    ui_default_group1_3.option.start_y = 600;
     ui_default_group1_3.option.color = 7;
     ui_default_group1_3.option.str_length = 8;
     ui_default_group1_3.option.width = 5;

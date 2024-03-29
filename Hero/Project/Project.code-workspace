@@ -7,7 +7,14 @@
     "settings": {
         "files.associations": {
             "*.m": "matlab",
-            "ui_interface.h": "c"
+            "ui_interface.h": "c",
+            "chassis_behaviour.h": "c",
+            "chassis_remote_control.h": "c",
+            "ui.h": "c",
+            "ui_default_group1_3.h": "c",
+            "ui_default_group1_5.h": "c",
+            "stdio.h": "c",
+            "ui_types.h": "c"
         }
     },
     "extensions": {}

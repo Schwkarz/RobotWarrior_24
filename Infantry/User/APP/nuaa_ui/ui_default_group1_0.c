@@ -21,8 +21,8 @@ void _ui_init_default_group1_0() {
     ui_default_group1_0.option.figure_tpye = 7;
     ui_default_group1_0.option.layer = 0;
     ui_default_group1_0.option.font_size = 60;
-    ui_default_group1_0.option.start_x = 51;
-    ui_default_group1_0.option.start_y = 731;
+    ui_default_group1_0.option.start_x = 55;
+    ui_default_group1_0.option.start_y = 800;
     ui_default_group1_0.option.color = 0;
     ui_default_group1_0.option.str_length = 4;
     ui_default_group1_0.option.width = 8;

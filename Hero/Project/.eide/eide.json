@@ -13,10 +13,10 @@
         "name": "algorithm",
         "files": [
           {
-            "path": "../User/Components/algorithm/AHRS.lib"
+            "path": "../User/Components/algorithm/AHRS_middleware.c"
           },
           {
-            "path": "../User/Components/algorithm/AHRS_middleware.c"
+            "path": "../User/Components/algorithm/AHRS.lib"
           },
           {
             "path": "../User/Components/algorithm/arm_cortexM4lf_math.lib"
@@ -103,7 +103,35 @@
             "path": "../User/APP/voltage_task/voltage_task.c"
           }
         ],
-        "folders": []
+        "folders": [
+          {
+            "name": "ui_interface",
+            "files": [
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group0_0.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_0.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_1.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_2.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_3.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_4.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_interface.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
       },
       {
         "name": "CMSIS",
@@ -546,7 +574,7 @@
       "uploadConfig": {
         "bin": "",
         "target": "stm32f4x",
-        "interface": "cmsis-dap-v1",
+        "interface": "cmsis-dap",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {
