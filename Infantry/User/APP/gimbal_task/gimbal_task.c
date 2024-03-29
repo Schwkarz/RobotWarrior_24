@@ -826,7 +826,7 @@ void gimbal_offset_init(void)
 
     gimbal_control.gimbal_pitch_motor.offset_ecd = 7199;
     gimbal_control.gimbal_pitch_motor.max_relative_angle = 0.65;
-    gimbal_control.gimbal_pitch_motor.min_relative_angle = -0.45;
+    gimbal_control.gimbal_pitch_motor.min_relative_angle = -0.29;
 }
 
 #if GIMBAL_TEST_MODE

@@ -228,27 +228,27 @@ static void shoot_set_mode(void)
         shoot_control.shoot_mode = SHOOT_STOP;
     }
 
-    // static uint32_t Tcount = 0;
-    // if(get_shoot_power_status())
-    // {
-    //     Tcount++;
-    //     if(Tcount >= 5000)
-    //     {
-    //         //空操作
-    //         led_green_on();
-    //     }
-    //     else
-    //     {
-    //         led_green_off();
-    //         shoot_control.shoot_mode = SHOOT_STOP;
-    //     }
-    // }
-    // else
-    // {
-    //     Tcount = 0;
-    //     led_green_off();
-    //     shoot_control.shoot_mode = SHOOT_STOP;
-    // }
+    static uint32_t Tcount = 0;
+    if(get_shoot_power_status())
+    {
+        Tcount++;
+        if(Tcount >= 5000)
+        {
+            //空操作
+            led_green_on();
+        }
+        else
+        {
+            led_green_off();
+            shoot_control.shoot_mode = SHOOT_STOP;
+        }
+    }
+    else
+    {
+        Tcount = 0;
+        led_green_off();
+        shoot_control.shoot_mode = SHOOT_STOP;
+    }
 
     //摩擦轮达到最大转速，等待子弹自动上膛
     if(shoot_control.shoot_mode == SHOOT_READY_FRIC && shoot_control.fric1_ramp.out == shoot_control.fric1_ramp.max_value && shoot_control.fric2_ramp.out == shoot_control.fric2_ramp.max_value)

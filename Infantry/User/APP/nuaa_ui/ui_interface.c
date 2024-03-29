@@ -4,22 +4,23 @@
 
 #include "ui_interface.h"
 #include <string.h>
-#include "main.h"
-#include "stm32f4xx.h"
+
 uint8_t seq = 0;
 
-void print_message(const uint8_t *message, const int length) {
-    for (int i = 0; i < length; i++) {
-        printf("%02x ", message[i]);
-    }
-    printf("\n\n");
-}
+// void print_message(const uint8_t *message, const int length) {
+//     for (int i = 0; i < length; i++) {
+//         printf("%02x ", message[i]);
+//     }
+//     printf("\n\n");
+// }
+
 void UART6_Send_Data(uint8_t* data, int len) {
     for (int i = 0; i < len; i++) {
         while(USART_GetFlagStatus(USART6, USART_FLAG_TXE) == RESET); // 等待上一次数据发送完成
         USART_SendData(USART6, data[i]); // 发送一个字节的数据
     }
 }
+
 
 const unsigned char CRC8_TAB[256] = {
     0x00, 0x5e, 0xbc, 0xe2, 0x61, 0x3f, 0xdd, 0x83, 0xc2, 0x9c, 0x7e, 0x20, 0xa3, 0xfd, 0x1f, 0x41,

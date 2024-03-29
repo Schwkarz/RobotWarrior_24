@@ -272,8 +272,7 @@ typedef __packed struct // 0x0308
     uint8_t user_data[30];
 } ext_custom_info_t;
 
-extern void
-init_referee_struct_data(void);
+extern void init_referee_struct_data(void);
 extern void referee_data_solve(uint8_t *frame);
 
 extern void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer);

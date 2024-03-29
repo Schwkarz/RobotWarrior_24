@@ -88,6 +88,8 @@ void UserTask(void *pvParameters)
     Kalman_Filter_Init(&Power_KalmanInfo_Structure);
     //获取加速度指针
     local_INS_accel = get_accel_filter_point();
+
+    uint8_t state = get_shoot_power_status();
     while (1)
     {
         Tcount++;
@@ -101,6 +103,9 @@ void UserTask(void *pvParameters)
         angle_degree[0] = (*(angle + INS_YAW_ADDRESS_OFFSET)) * 57.3f;
         angle_degree[1] = (*(angle + INS_PITCH_ADDRESS_OFFSET)) * 57.3f;
         angle_degree[2] = (*(angle + INS_ROLL_ADDRESS_OFFSET)) * 57.3f;
+
+        state = get_shoot_power_status();
+        // printf("%d\n",state);
 
         // angle_degree[0] = (*(angle + INS_YAW_ADDRESS_OFFSET));
         // angle_degree[1] = (*(angle + INS_PITCH_ADDRESS_OFFSET));
@@ -128,7 +133,7 @@ void UserTask(void *pvParameters)
         // printf("%.2f, %.2f\n", 
         // local_gimbal_control->gimbal_yaw_motor.absolute_angle * 57.3f, local_gimbal_control->gimbal_yaw_motor.absolute_angle_set * 57.3f);
         // printf("%.2f, %.2f\n", 
-        // local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f, local_gimbal_control->gimbal_yaw_motor.relative_angle_set * 57.3f;
+        // local_gimbal_control->gimbal_yaw_motor.relative_angle * 57.3f, local_gimbal_control->gimbal_yaw_motor.relative_angle_set * 57.3f);
 
         // 相机帧率
         // printf("%.2f\n", local_gimbal_control->gimbal_ros_msg->shoot_depth);
@@ -137,6 +142,7 @@ void UserTask(void *pvParameters)
         // printf("%.2f, %.2f, %.2f, %.2f\n", 
         // local_gimbal_control->gimbal_pitch_motor.absolute_angle * 57.3f, local_gimbal_control->gimbal_pitch_motor.absolute_angle_set * 57.3f,
         // local_gimbal_control->gimbal_pitch_motor.motor_gyro * 10, local_gimbal_control->gimbal_pitch_motor.motor_gyro_set * 10);
+        // printf("%.2f, %.2f\n", local_gimbal_control->gimbal_pitch_motor.absolute_angle * 57.3f, local_gimbal_control->gimbal_pitch_motor.absolute_angle_set * 57.3f);
 
         //底盘跟随云台角度pid调参
         // printf("%.2f, %.2f\n", local_chassis_move->chassis_relative_angle * 57.3f, local_chassis_move->chassis_relative_angle_set * 57.3f);

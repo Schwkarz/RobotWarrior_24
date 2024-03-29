@@ -5,14 +5,14 @@
 #ifndef SERIAL_TEST_UI_TYPES_H
 #define SERIAL_TEST_UI_TYPES_H
 
+#include "stm32f4xx.h"
+
 #ifdef __GNUC__
 #define MESSAGE_PACKED __attribute__((packed))
 #include <stdint.h>
 #else
 #define MESSAGE_PACKED __attribute__((packed))
 #endif
-
-#include "stm32f4xx.h"
 
 #define PRIMITIVE_CAT(x, y) x ## y
 #define CAT(x, y) PRIMITIVE_CAT(x, y)
@@ -47,7 +47,7 @@ typedef struct {
     uint32_t figure_tpye: 3;
     uint32_t layer: 4;
     uint32_t color: 4;
-    uint32_t _a: 9;
+    uint32_t font_size: 9;
     uint32_t _b: 9;
     uint32_t width: 10;
     uint32_t start_x: 11;

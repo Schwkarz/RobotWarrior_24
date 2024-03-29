@@ -93,6 +93,9 @@
             "name": "ui_interface",
             "files": [
               {
+                "path": "../User/APP/nuaa_ui/ui_default_group0_0.c"
+              },
+              {
                 "path": "../User/APP/nuaa_ui/ui_default_group1_0.c"
               },
               {
@@ -103,6 +106,9 @@
               },
               {
                 "path": "../User/APP/nuaa_ui/ui_default_group1_3.c"
+              },
+              {
+                "path": "../User/APP/nuaa_ui/ui_default_group1_4.c"
               },
               {
                 "path": "../User/APP/nuaa_ui/ui_interface.c"
@@ -572,7 +578,7 @@
       "uploadConfig": {
         "bin": "",
         "target": "stm32f4x",
-        "interface": "daplink-swd",
+        "interface": "stlink",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {

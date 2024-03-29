@@ -533,11 +533,11 @@ static void GIMBAL_Set_Contorl(Gimbal_Control_t *gimbal_set_control)
     else if (gimbal_set_control->gimbal_yaw_motor.gimbal_motor_mode == GIMBAL_MOTOR_GYRO)
     {
         //gyro模式下，陀螺仪角度控制
-        // if(!rotation_cmd_gimbal_absolute())
-        // {
-        //     GIMBAL_absolute_angle_limit(&gimbal_set_control->gimbal_yaw_motor, add_yaw_angle);
-        // }
-        // else
+        if(!rotation_cmd_gimbal_absolute())
+        {
+             GIMBAL_absolute_angle_limit(&gimbal_set_control->gimbal_yaw_motor, add_yaw_angle);
+        }
+        else
         {
             GIMBAL_rotation_angle_set(&gimbal_set_control->gimbal_yaw_motor, add_yaw_angle);
         }

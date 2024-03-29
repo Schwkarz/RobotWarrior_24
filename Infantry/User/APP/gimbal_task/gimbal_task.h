@@ -28,7 +28,7 @@
 #include "user_lib.h"
 
 //pitch 速度环 PID参数以及 PID最大输出，积分输出
-#define PITCH_SPEED_PID_KP 2400.0f
+#define PITCH_SPEED_PID_KP 3200.0f
 #define PITCH_SPEED_PID_KI 8.0f
 #define PITCH_SPEED_PID_KD 0.0f
 #define PITCH_SPEED_PID_MAX_OUT 30000.0f
@@ -36,9 +36,9 @@
 
 //pitch 角度环 角度由陀螺仪解算 PID参数以及 PID最大输出，积分输出
 //20 0.01 0.6
-#define PITCH_GYRO_ABSOLUTE_PID_KP 30.0f
-#define PITCH_GYRO_ABSOLUTE_PID_KI 0.0f
-#define PITCH_GYRO_ABSOLUTE_PID_KD 1.0f
+#define PITCH_GYRO_ABSOLUTE_PID_KP 38.f
+#define PITCH_GYRO_ABSOLUTE_PID_KI 8.0f
+#define PITCH_GYRO_ABSOLUTE_PID_KD 0.0f
 #define PITCH_GYRO_ABSOLUTE_PID_MAX_OUT 10.0f
 #define PITCH_GYRO_ABSOLUTE_PID_MAX_IOUT 1.0f
 
@@ -92,10 +92,10 @@
 //yaw，pitch角度与遥控器输入比例
 #define Yaw_RC_SEN -0.000005f
 // #define Pitch_RC_SEN -0.00079327f //0.005  -0.000006
-#define Pitch_RC_SEN -0.0000050f
+#define Pitch_RC_SEN -0.000006f
 //yaw,pitch角度和鼠标输入的比例
-#define Yaw_Mouse_Sen 0.000005f
-#define Pitch_Mouse_Sen 0.000005f
+#define Yaw_Mouse_Sen 0.000010f
+#define Pitch_Mouse_Sen 0.000015f
 //云台编码器控制时候使用的比例
 #define Yaw_Encoder_Sen 0.01f
 #define Pitch_Encoder_Sen 0.01f

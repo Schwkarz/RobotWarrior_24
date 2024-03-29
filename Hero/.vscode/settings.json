@@ -1,3 +1,6 @@
 {
-    "C_Cpp.intelliSenseEngine": "default"
+    "C_Cpp.intelliSenseEngine": "default",
+    "files.associations": {
+        "chassis_remote_control.h": "c"
+    }
 }

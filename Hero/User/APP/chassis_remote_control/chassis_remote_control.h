@@ -1,4 +1,4 @@
-/**
+ /**
   ****************************(C) COPYRIGHT 2016 DJI****************************
   * @file       chassis.c/h
   * @brief      完成底盘控制任务。
@@ -94,7 +94,7 @@
 #define CHASSIS_CTL_TIME 2
 
 //小陀螺旋转速度
-#define ROTATION_SPEED_MAX 5.0f
+#define ROTATION_SPEED_MAX 2.0f
 #define ROTATION_SPEED_ADD_VALUE ROTATION_SPEED_MAX
 
 

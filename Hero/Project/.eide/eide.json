@@ -13,10 +13,10 @@
         "name": "algorithm",
         "files": [
           {
-            "path": "../User/Components/algorithm/AHRS_middleware.c"
+            "path": "../User/Components/algorithm/AHRS.lib"
           },
           {
-            "path": "../User/Components/algorithm/AHRS.lib"
+            "path": "../User/Components/algorithm/AHRS_middleware.c"
           },
           {
             "path": "../User/Components/algorithm/arm_cortexM4lf_math.lib"
@@ -34,6 +34,9 @@
             "path": "../User/APP/CAN_receive/CAN_receive.c"
           },
           {
+            "path": "../User/APP/CAN_receive/DM4310/DM4310.c"
+          },
+          {
             "path": "../User/APP/chassis_remote_control/chassis_behaviour.c"
           },
           {
@@ -41,9 +44,6 @@
           },
           {
             "path": "../User/APP/chassis_remote_control/chassis_remote_control.c"
-          },
-          {
-            "path": "../User/APP/detect_task/detect_task.c"
           },
           {
             "path": "../User/APP/FreeRTOS/FreeRTOS_middleware.c"
@@ -59,6 +59,21 @@
           },
           {
             "path": "../User/APP/INS_task/INS_task.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_default_group1_0.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_default_group1_1.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_default_group1_2.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_default_group1_3.c"
+          },
+          {
+            "path": "../User/APP/nuaa_ui/ui_interface.c"
           },
           {
             "path": "../User/APP/referee_task/referee_usart_task.c"
@@ -88,29 +103,7 @@
             "path": "../User/APP/voltage_task/voltage_task.c"
           }
         ],
-        "folders": [
-          {
-            "name": "ui_interface",
-            "files": [
-              {
-                "path": "../User/APP/nuaa_ui/ui_default_group1_0.c"
-              },
-              {
-                "path": "../User/APP/nuaa_ui/ui_default_group1_1.c"
-              },
-              {
-                "path": "../User/APP/nuaa_ui/ui_default_group1_2.c"
-              },
-              {
-                "path": "../User/APP/nuaa_ui/ui_default_group1_3.c"
-              },
-              {
-                "path": "../User/APP/nuaa_ui/ui_interface.c"
-              }
-            ],
-            "folders": []
-          }
-        ]
+        "folders": []
       },
       {
         "name": "CMSIS",
@@ -143,10 +136,10 @@
             "path": "../User/Components/devices/BMI088Middleware.c"
           },
           {
-            "path": "../User/Components/devices/ist8310driver_middleware.c"
+            "path": "../User/Components/devices/ist8310driver.c"
           },
           {
-            "path": "../User/Components/devices/ist8310driver.c"
+            "path": "../User/Components/devices/ist8310driver_middleware.c"
           }
         ],
         "folders": []
@@ -164,12 +157,6 @@
             "path": "../FreeRTOS/list.c"
           },
           {
-            "path": "../FreeRTOS/portable/MemMang/heap_4.c"
-          },
-          {
-            "path": "../FreeRTOS/portable/RVDS/ARM_CM4F/port.c"
-          },
-          {
             "path": "../FreeRTOS/queue.c"
           },
           {
@@ -177,6 +164,12 @@
           },
           {
             "path": "../FreeRTOS/timers.c"
+          },
+          {
+            "path": "../FreeRTOS/portable/MemMang/heap_4.c"
+          },
+          {
+            "path": "../FreeRTOS/portable/RVDS/ARM_CM4F/port.c"
           },
           {
             "path": "../User/hardware/flash.c"
@@ -203,6 +196,9 @@
             "path": "../FWLIB/src/stm32f4xx_crc.c"
           },
           {
+            "path": "../FWLIB/src/stm32f4xx_cryp.c"
+          },
+          {
             "path": "../FWLIB/src/stm32f4xx_cryp_aes.c"
           },
           {
@@ -210,9 +206,6 @@
           },
           {
             "path": "../FWLIB/src/stm32f4xx_cryp_tdes.c"
-          },
-          {
-            "path": "../FWLIB/src/stm32f4xx_cryp.c"
           },
           {
             "path": "../FWLIB/src/stm32f4xx_dac.c"
@@ -239,10 +232,10 @@
             "path": "../FWLIB/src/stm32f4xx_exti.c"
           },
           {
-            "path": "../FWLIB/src/stm32f4xx_flash_ramfunc.c"
+            "path": "../FWLIB/src/stm32f4xx_flash.c"
           },
           {
-            "path": "../FWLIB/src/stm32f4xx_flash.c"
+            "path": "../FWLIB/src/stm32f4xx_flash_ramfunc.c"
           },
           {
             "path": "../FWLIB/src/stm32f4xx_fmpi2c.c"
@@ -254,13 +247,13 @@
             "path": "../FWLIB/src/stm32f4xx_gpio.c"
           },
           {
+            "path": "../FWLIB/src/stm32f4xx_hash.c"
+          },
+          {
             "path": "../FWLIB/src/stm32f4xx_hash_md5.c"
           },
           {
             "path": "../FWLIB/src/stm32f4xx_hash_sha1.c"
-          },
-          {
-            "path": "../FWLIB/src/stm32f4xx_hash.c"
           },
           {
             "path": "../FWLIB/src/stm32f4xx_i2c.c"
@@ -319,9 +312,6 @@
       {
         "name": "Hardware",
         "files": [
-          {
-            "path": "../User/APP/CAN_receive/DM4310/DM4310.c"
-          },
           {
             "path": "../User/hardware/adc.c"
           },
@@ -419,10 +409,10 @@
         "name": "user_lib",
         "files": [
           {
-            "path": "../User/user_lib/Kalman_Filter.c"
+            "path": "../User/user_lib/user_lib.c"
           },
           {
-            "path": "../User/user_lib/user_lib.c"
+            "path": "../User/user_lib/Kalman_Filter.c"
           }
         ],
         "folders": []
@@ -430,8 +420,8 @@
     ]
   },
   "outDir": "build",
-  "deviceName": null,
-  "packDir": null,
+  "deviceName": "STM32F407IGTx",
+  "packDir": ".pack/Keil/STM32F4xx_DFP.2.14.0",
   "miscInfo": {
     "uid": "2445174883fa635aae009352232da7d8"
   },
@@ -601,7 +591,6 @@
           "../User/APP/ROS_Receive",
           "../User/APP/referee_task",
           "../User/Components/support",
-          ".eide/deps",
           "../User/APP/CAN_receive/DM4310",
           "../User/APP/UI_task",
           "../User/APP/nuaa_ui"
@@ -616,7 +605,8 @@
           "ARM_MATH_CM4",
           "__CC_ARM",
           "ARM_MATH_MATRIX_CHECK",
-          "ARM_MATH_ROUNDING"
+          "ARM_MATH_ROUNDING",
+          "STM32F407xx"
         ]
       }
     }

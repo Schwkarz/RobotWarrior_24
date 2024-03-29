@@ -6,8 +6,8 @@
 /*------------------printf函数重定向-------------------*/
 int fputc(int ch, FILE *f)
 {
-    USART_SendData(USART6, (unsigned char) ch);
-    while (!(USART6->SR & USART_FLAG_TXE));
+    USART_SendData(USART1, (unsigned char) ch);
+    while (!(USART1->SR & USART_FLAG_TXE));
     return (ch);
 }
 /*-----------------------------------------------------*/

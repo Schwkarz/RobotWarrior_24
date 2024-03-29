@@ -29,15 +29,9 @@ void UI_Task(void *parameters)
 
     while (1)
     {
-        // ui_init_default_group1();
-
         ui_update_judge();
 
-        // taskENTER_CRITICAL();
-
         ui_update_default_group1();
-
-        // taskENTER_CRITICAL();
 
         vTaskDelay(300);
     }

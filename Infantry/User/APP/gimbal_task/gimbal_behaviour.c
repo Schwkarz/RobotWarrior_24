@@ -36,7 +36,7 @@
 //#define GIMBALWarnBuzzerOFF() buzzer_off()
 
 #define int_abs(x) ((x) > 0 ? (x) : (-x))
-uint8_t init_step = 3;// 第一次上电，3:1减速比找中值
+uint8_t init_step = 0;// 第一次上电，3:1减速比找中值
 KalmanInfo accel_x_kalman;
 KalmanInfo accel_y_kalman; 
 /**
@@ -494,7 +494,7 @@ static void gimbal_behavour_set(Gimbal_Control_t *gimbal_mode_set)
                     vx += accel_x_kalman.out;
                 if(fabs(accel_y_kalman.out) > 0.8f)
                     vy += accel_y_kalman.out;
-                printf("%.2f,%.2f\r\n",accel_x_kalman.out,accel_y_kalman.out);
+                // printf("%.2f,%.2f\r\n",accel_x_kalman.out,accel_y_kalman.out);
 
                 // if(fabs(accel_x_kalman.out) > 0.8f)
                 //     vx += local_accel[0];
