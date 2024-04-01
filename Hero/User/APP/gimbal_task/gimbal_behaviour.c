@@ -726,6 +726,8 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
     fp32 set_yaw = 0.0f, set_pitch = 0.0f;
     if(gimbal_control_set->gimbal_ros_msg->shoot_depth != 0)
     {
+        // *yaw = 0.0f;
+        // *pitch = 0.0f;
         // Laser_On();
         set_yaw = gimbal_control_set->gimbal_ros_msg->shoot_yaw;
         set_pitch = gimbal_control_set->gimbal_ros_msg->shoot_pitch;
@@ -736,8 +738,12 @@ static void gimbal_autoshoot_control(fp32 *yaw, fp32 *pitch, Gimbal_Control_t *g
         // 低通滤波
         first_order_filter_cali(&gimbal_control_set->gimbal_yaw_motor.gimbal_cmd_slow_set, set_yaw);
         first_order_filter_cali(&gimbal_control_set->gimbal_pitch_motor.gimbal_cmd_slow_set, set_pitch);
-        *yaw = gimbal_control_set->gimbal_yaw_motor.gimbal_cmd_slow_set.out - gimbal_control_set->gimbal_yaw_motor.absolute_angle_set;
+        *yaw = gimbal_control_set->gimbal_yaw_motor.gimbal_cmd_slow_set.out - gimbal_control_set->gimbal_yaw_motor.absolute_angle_set ;
         *pitch = gimbal_control_set->gimbal_pitch_motor.gimbal_cmd_slow_set.out - gimbal_control_set->gimbal_pitch_motor.absolute_angle_set;
+
+        // *yaw = gimbal_control_set->gimbal_yaw_motor.gimbal_cmd_slow_set - gimbal_control_set->gimbal_yaw_motor.absolute_angle_set+
+        // rc_add_yaw = yaw_channel * Yaw_RC_SEN - gimbal_control_set->gimbal_rc_ctrl->mouse.x * Yaw_Mouse_Sen;
+        // rc_add_pit = pitch_channel * Pitch_RC_SEN - gimbal_control_set->gimbal_rc_ctrl->mouse.y * Pitch_Mouse_Sen;
     }
     else
     {

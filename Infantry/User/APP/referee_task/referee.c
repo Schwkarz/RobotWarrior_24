@@ -275,8 +275,6 @@ uint8_t get_shoot_power_status(void)
 
 uint8_t get_shoot_17mm_speed_limit(void)
 {
-    // return robot_state.shooter_id1_17mm_speed_limit;
-
     //24赛季射速上限恒定为30
     return 30;
 }

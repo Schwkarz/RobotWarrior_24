@@ -66,23 +66,11 @@ typedef __packed struct // 0x0101
 
 typedef __packed struct // 0x0102
 {
-    // uint8_t supply_projectile_id;
-    // uint8_t supply_robot_id;
-    // uint8_t supply_projectile_step;
-    // uint8_t supply_projectile_num;
     uint8_t reserved;
     uint8_t supply_robot_id;
     uint8_t supply_projectile_step;
     uint8_t supply_projectile_num;
 } ext_supply_projectile_action_t;
-
-// V1.5已删除
-// typedef __packed struct // 0x0103
-// {
-//     uint8_t supply_projectile_id;
-//     uint8_t supply_robot_id;
-//     uint8_t supply_num;
-// } ext_supply_projectile_booking_t;
 
 typedef __packed struct
 {
@@ -95,23 +83,6 @@ typedef __packed struct
 
 typedef __packed struct // 0x0201
 {
-    // uint8_t robot_id;
-    // uint8_t robot_level;
-    // uint16_t remain_HP;
-    // uint16_t max_HP;
-    // uint16_t shooter_id1_17mm_cooling_rate;
-    // uint16_t shooter_id1_17mm_cooling_limit;
-    // uint16_t shooter_id1_17mm_speed_limit;
-    // uint16_t shooter_id2_17mm_cooling_rate;
-    // uint16_t shooter_id2_17mm_cooling_limit;
-    // uint16_t shooter_id2_17mm_speed_limit;
-    // uint16_t shooter_id1_42mm_cooling_rate;
-    // uint16_t shooter_id1_42mm_cooling_limit;
-    // uint16_t shooter_id1_42mm_speed_limit;
-    // uint16_t chassis_power_limit;
-    // uint8_t mains_power_gimbal_output : 1;
-    // uint8_t mains_power_chassis_output : 1;
-    // uint8_t mains_power_shooter_output : 1;
     uint8_t robot_id;
     uint8_t robot_level;
     uint16_t current_HP;
@@ -137,10 +108,6 @@ typedef __packed struct // 0x0202
 
 typedef __packed struct // 0x0203
 {
-    // float x;
-    // float y;
-    // float z;
-    // float yaw;
     float x;
     float y;
     float angle;
@@ -175,18 +142,12 @@ typedef __packed struct // 0x0207
 } ext_shoot_data_t;
 typedef __packed struct
 {
-    // uint8_t bullet_remaining_num;
     uint16_t projectile_allowance_17mm;
     uint16_t projectile_allowance_42mm;
     uint16_t remaining_gold_coin;
 } ext_bullet_remaining_t;
 typedef __packed struct // 0x0301
 {
-    // uint16_t send_ID;
-    // uint16_t receiver_ID;
-    // uint16_t data_cmd_id;
-    // uint16_t data_len;
-    // uint8_t *data;
     uint16_t data_cmd_id;
     uint16_t sender_id;
     uint16_t receiver_id;

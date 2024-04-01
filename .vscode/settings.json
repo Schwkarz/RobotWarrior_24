@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "shoot.h": "c",
+        "calibrate_task.h": "c",
+        "referee.h": "c"
+    }
+}

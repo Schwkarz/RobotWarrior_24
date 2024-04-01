@@ -49,7 +49,7 @@ void TIM8_UP_TIM13_IRQHandler(void)
 {
     if (TIM_GetITStatus(TIM8, TIM_IT_Update) != RESET) 
     {
-        // Send_Gimbal_Angle(local_imu_angle[0], local_imu_angle[1], 0);
+         Send_Gimbal_Angle(local_imu_angle[0], local_imu_angle[1], 0);
     }
     TIM_ClearITPendingBit(TIM8, TIM_IT_Update);
 }

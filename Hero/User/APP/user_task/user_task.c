@@ -113,7 +113,7 @@ void UserTask(void *pvParameters)
         // local_gimbal_control->gimbal_pitch_motor.motor_gyro * 10, local_gimbal_control->gimbal_pitch_motor.motor_gyro_set * 10);
 
         // 拨弹轮电机pid
-        printf("%f, %f, %f\n", local_shoot_control->speed, local_shoot_control->speed_set, local_shoot_control->angle);
+        // printf("%f, %f, %f\n", local_shoot_control->speed, local_shoot_control->speed_set, local_shoot_control->angle);
 
         //底盘跟随云台角度pid调参
         // printf("%.2f, %.2f\n", local_chassis_move->chassis_relative_angle * 57.3f, local_chassis_move->chassis_relative_angle_set * 57.3f);

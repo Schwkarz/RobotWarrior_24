@@ -14,7 +14,9 @@
             "ui_default_group1_3.h": "c",
             "ui_default_group1_5.h": "c",
             "stdio.h": "c",
-            "ui_types.h": "c"
+            "ui_types.h": "c",
+            "stm32f4xx.h": "c",
+            "remote_control.h": "c"
         }
     },
     "extensions": {}
