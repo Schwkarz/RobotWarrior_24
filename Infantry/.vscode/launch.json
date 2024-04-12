@@ -1,0 +1,21 @@
+// (๑ت๑)ﾉ(´∇｀) 20:17:45
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "openocd",
+            "servertype": "openocd",
+            "executable": "Project\\build\\Target 1\\warrior.elf",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                // "interface/stlink.cfg",
+                "interface/cmsis-dap-v1.cfg",
+                "target/stm32f4x.cfg"
+            ]
+        }
+    ]
+}
+

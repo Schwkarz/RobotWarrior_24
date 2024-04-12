@@ -578,7 +578,7 @@
       "uploadConfig": {
         "bin": "",
         "target": "stm32f4x",
-        "interface": "daplink-swd",
+        "interface": "cmsis-dap-v1",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {

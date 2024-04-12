@@ -36,7 +36,7 @@
 //#define GIMBALWarnBuzzerOFF() buzzer_off()
 
 #define int_abs(x) ((x) > 0 ? (x) : (-x))
-uint8_t init_step = 0;// 第一次上电，3:1减速比找中值
+uint8_t init_step = 3;// 第一次上电，3:1减速比找中值
 KalmanInfo accel_x_kalman;
 KalmanInfo accel_y_kalman; 
 /**
@@ -502,7 +502,7 @@ static void gimbal_behavour_set(Gimbal_Control_t *gimbal_mode_set)
                 //     vy += local_accel[1];
                 // printf("%.2f,%.2f\r\n",local_accel[0],local_accel[1]);
 
-                if(yaw_ecd_cali_time > 115)
+                if(yaw_ecd_cali_time > 100)
                 {
                     //vx,vy判断时要加绝对值
                     //多次测试发现，ecd=2时，k在负一左右，ecd=1时，k在1左右，适用于2024.3新版步兵
